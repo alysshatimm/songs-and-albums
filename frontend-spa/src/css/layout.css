@@ -9,6 +9,16 @@ body {
     margin-right: 20px;
 }
 
+.page {
+    display: grid;
+    grid-template-rows: 200px auto 50px;
+}
+
+footer {
+    justify-self: center;
+    align-self: end;
+}
+
 header {
     display: flex;
     justify-content: center;
