@@ -40,6 +40,9 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: bold;
+    background: rgb(6, 6, 66);
+    color: white;
+    padding: 10px
 }
 
 .submit-comment {
@@ -55,16 +58,6 @@ footer {
     color: white;
 }
 
-.dropbtn {
-    align-self: center;
-    background-color: var(--dark-purple);
-    padding: 12px;
-    height: 75%;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -75,22 +68,8 @@ footer {
     z-index: 1;
 }
 
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--dark-pink);
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: var(--dark-pink);
 }
 
 .modal {
@@ -111,7 +90,6 @@ footer {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 90%;
     max-width: 1000px;

@@ -33,12 +33,20 @@ header {
 }
 
 .comment-block {
-    width: 100%
+    width: 100% padding-right: 20px;
+}
+
+.song-block {
+    padding-left: 20px;
 }
 
 .comment {
     padding: 10px;
     display: grid;
+}
+
+.modal-content {
+    padding-bottom: 20px;
 }
 
 .add-comments {
