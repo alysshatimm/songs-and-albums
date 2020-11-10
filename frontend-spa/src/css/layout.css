@@ -1,9 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 10px;
+}
+
+.modal-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.song-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 img {
     width: 100%;
+}
+
+.song {
+    display: flex;
+    align-items: center;
 }
