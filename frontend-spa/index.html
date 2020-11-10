@@ -19,14 +19,14 @@
         <div class="dropdown template-album">
             <button id="album-button" class="dropbtn">
                 <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">Foreigners</h2>
+                <h2 class="artist">Foreigner</h2>
                 <h3 class="album-name">4</h3>
             </button>
             <div id="modals" class="dropdown-content">
                 <div id="album-modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
+                        <h2 class="album-name-modal">ExampleAlbum</h2>
                         <div class="modal-block">
                             <div class="song-block">
                                 <ol class="songs-name-list">
@@ -39,145 +39,55 @@
                                 </ol>
                             </div>
                             <div class="comment-block">
-                                <p>Comments and Stars</p>
+                                <p class="average-stars">Average Stars: 3.5</p>
+                                <form action="" class="stars add-stars">
+                                    <input id="star-5" value="★★★★★" type="radio" name="rating" />
+                                    <label for="star-5"></label>
+                                    <input id="star-4" value="★★★★" type="radio" name="rating" />
+                                    <label for="star-4"></label>
+                                    <input id="star-3" value="★★★" type="radio" name="rating" />
+                                    <label for="star-3"></label>
+                                    <input id="star-2" value="★★" type="radio" name="rating" />
+                                    <label for="star-2"></label>
+                                    <input id="star-1" value="★" type="radio" name="rating" />
+                                    <label for="star-1"></label>
+                                </form>
+                                <form action="" class="add-comments">
+                                    <label for="author-input"></label>
+                                    <label for="headline-input"></label>
+                                    <label for="comments-input"></label>
+                                    <input placeholder="Your Name" type="text" name="authorText" id="author-input" class="modal-input">
+                                    <input placeholder="Headline" type="text" name="headlineText" id="headline-input" class="modal-input">
+                                    <input placeholder="Add New Comment" type="text" name="commentText" id="comments-input" class="modal-input">
+                                    <button class="submit-comment" type="submit">Submit</button>
+                                </form>
+                                <div class="comments">
+                                    <p class="comment">
+                                        <p class="author">Abigail</p>
+                                        <p class="headline">#Foreigners </p>
+                                        <p class="comment">A magnificent new premier named McDonald Trump rose to power and made America great again! He also became buddies with tough guy leaders from around the world.</p>
+                                    </p>
+                                    <p class="comment">
+                                        <p class="author">Levi</p>
+                                        <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
+                                        <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that
+                                            wall. Mark my words.</p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
+            <button id="add-album-button" class="dropbtn">
+                <img class="album-art" src="https://img.freepik.com/free-photo/black-vinyl-record-yellow-background_23-2147889810.jpg?size=338&ext=jpg" alt="Album Artwork">
+                <h2 class="artist">Add an Album</h2>
+                
             </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
-
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
-                <h2 class="artist">ExampleArtist</h2>
-                <h3 class="album-name">ExampleAlbum</h3>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="album-name">ExampleAlbum</h2>
-                        <ol class="songs-list">
-                            <li class="song">
-                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
-                                <p class="song-duration">0:00</p>
-                            </li>
-                        </ol>
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </main>

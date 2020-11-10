@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -17,9 +22,26 @@ header {
     column-gap: 10px;
 }
 
+.comment-block {
+    width: 100%
+}
+
+.comment {
+    padding: 10px;
+    display: grid;
+}
+
+.add-comments {
+    display: grid;
+}
+
 .modal-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 300px 1fr;
+}
+
+.album-name-modal {
+    margin-bottom: 20px;
 }
 
 .song-block {
@@ -28,7 +50,7 @@ header {
 }
 
 img {
-    width: 100%;
+    width: 300px;
 }
 
 .song {
