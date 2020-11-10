@@ -5,10 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 5 Project</title>
+    <link rel=" stylesheet " href="./src/css/layout.css">
+    <link rel="stylesheet " href="./src/css/styles.css">
 </head>
 
 <body>
+    <header>
+        <h1>Jukebox Heroes</h1>
+    </header>
 
+    <main class="container">
+
+
+
+        <div class="dropdown">
+            <button id="album-button" class="dropbtn">
+                <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
+                <h2 class="artist">ExampleArtist</h2>
+                <h3 class="album-name">ExampleAlbum</h3>
+            </button>
+            <div id="modals" class="dropdown-content">
+                <div id="album-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="album-name">ExampleAlbum</h2>
+                        <ol class="songs-list">
+                            <li class="song">
+                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
+                                <p class="song-duration">0:00</p>
+                            </li>
+                            <li class="song">
+                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
+                                <p class="song-duration">0:00</p>
+                            </li>
+                            <li class="song">
+                                <a href="https://www.youtube.com/watch?v=fr6KVNt-1Ek" target="_blank" rel="noopener noreferrer" class="song-name">Song Name</a>
+                                <p class="song-duration">0:00</p>
+                            </li>
+
+
+                        </ol>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+    <footer></footer>
+    <script src="/src/js/app.js " type="module"></script>
 </body>
 
 </html>
