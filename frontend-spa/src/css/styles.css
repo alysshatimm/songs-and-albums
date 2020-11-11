@@ -36,7 +36,8 @@ footer {
     font-weight: 300;
 }
 
-.album-name-modal {
+.album-name-modal,
+.song-name-modal {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: bold;
@@ -105,6 +106,8 @@ li {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 .close:hover,

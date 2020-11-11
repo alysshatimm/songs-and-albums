@@ -12,6 +12,7 @@ body {
 .page {
     display: grid;
     grid-template-rows: 200px auto 50px;
+    
 }
 
 footer {
@@ -29,11 +30,16 @@ header {
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 10px;
+    column-gap: 20px;
+}
+
+.dropbtn {
+    margin-right: 10px;
 }
 
 .comment-block {
-    width: 100% padding-right: 20px;
+    width: 100%; 
+    padding-right: 20px;
 }
 
 .song-block {
@@ -51,6 +57,7 @@ header {
 
 .add-comments {
     display: grid;
+    padding-right: 20px;
 }
 
 .modal-block {
@@ -58,7 +65,13 @@ header {
     grid-template-columns: 300px 1fr;
 }
 
-.album-name-modal {
+.song-modal-block {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+}
+
+.album-name-modal,
+.song-name-modal {
     margin-bottom: 20px;
 }
 
