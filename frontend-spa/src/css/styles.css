@@ -46,6 +46,10 @@ footer {
     padding: 10px
 }
 
+.song-name-modal {
+    background: rgb(173, 134, 4);
+}
+
 .submit-comment {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
