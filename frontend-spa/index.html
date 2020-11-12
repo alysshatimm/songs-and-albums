@@ -19,24 +19,28 @@
                 <img class="album-art" src="https://cdn2.albumoftheyear.org/345x/album/257812-juke-box-hero.jpg" alt="Album Artwork">
                 <h2 class="artist">Foreigner</h2>
                 <h3 class="album-name">4</h3>
+                <h4 class="record-label">Atlantic Records</h4>
+                
             </button>
+
+            <!-- Start Album Modal********************************************* -->
             <div id="modals" class="dropdown-content">
                 <div id="album-modal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h2 class="album-name-modal">4</h2>
+                        <h2 id="album-name-modal-title" class="album-name-modal modal-title">4</h2>
+
                         <div class="modal-block">
                             <div class="song-block">
                                 <ol class="songs-name-list">
-                                    <li id="song-button" class="song-name">Urgent</li> ******
+                                    <li id="song-button" class="song-name">Urgent</li>
 
-
-
+                                    <!-- Start Song Modal****************************************************************** -->
                                     <div id="modals" class="dropdown-content">
                                         <div id="song-modal" class="modal">
                                             <div class="modal-content">
                                                 <span class="close song-close">&times;</span>
-                                                <h2 id="song-name-modal" class="song-name-modal">"Urgent"</h2>
+                                                <h2 id="song-name-modal-title" class="song-name-modal modal-title">"Urgent"</h2>
                                                 <div class="song-modal-block">
                                                     <div class="song-block">
                                                         <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
@@ -74,15 +78,16 @@
                                                             <p class="comment">
                                                                 <p class="author">Levi</p>
                                                                 <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
-                                                                <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that
-                                                                    wall. Mark my words.</p>
+                                                                <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will
+                                                                    make Mexico pay for that wall. Mark my words.</p>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
+                                    <!-- End Song Modal *************************************************** -->
                                     <li class="song-name">Juke Box Hero</li>
                                 </ol>
                                 <ol class="song-duration-list">
@@ -131,10 +136,12 @@
                     </div>
                 </div>
             </div>
+            <!-- End Album Modal********************************************* -->
             <button id="add-album-button" class="dropbtn">
                 <img class="album-art" src="https://img.freepik.com/free-photo/black-vinyl-record-yellow-background_23-2147889810.jpg?size=338&ext=jpg" alt="Album Artwork">
                 <h2 class="artist">Add an Album</h2>
                 <h3 class="album-name">Click Here</h3>
+                <h4 class="record-label">To Add a New Record</h4>
             </button>
             <div id="modals" class="dropdown-content">
                 <div id="album-modal-add" class="modal">

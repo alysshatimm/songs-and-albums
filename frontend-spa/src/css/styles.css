@@ -21,13 +21,15 @@ footer {
     font-weight: 500;
 }
 
-.album-name {
+.album-name,
+.record-label {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: italic;
 }
 
-.song-block,
+.song-name,
+.duration,
 .comments,
 .average-stars,
 .modal-input {

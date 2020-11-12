@@ -12,7 +12,6 @@ body {
 .page {
     display: grid;
     grid-template-rows: 200px auto 50px;
-    
 }
 
 footer {
@@ -34,11 +33,12 @@ header {
 }
 
 .dropbtn {
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .comment-block {
-    width: 100%; 
+    width: 100%;
     padding-right: 20px;
 }
 
@@ -66,8 +66,8 @@ header {
 }
 
 .song-modal-block {
-        display: grid;
-        grid-template-columns: 500px 1fr;
+    display: grid;
+    grid-template-columns: 500px 1fr;
 }
 
 .album-name-modal,
