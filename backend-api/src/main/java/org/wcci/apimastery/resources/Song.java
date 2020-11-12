@@ -19,7 +19,7 @@ public class Song {
     @OneToMany(mappedBy = "song")
     private Set<SongComment> songComments;
 
-    protected Song(){
+    protected Song() {
 
     }
 
