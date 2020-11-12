@@ -5,6 +5,13 @@ body {
     background-size: cover;
 }
 
+:root {
+    --darkblue: rgb(6, 6, 66);
+    --lightblue: rgb(136, 136, 177);
+    --darkyellow: rgb(173, 134, 4);
+    --lightyellow: rgb(218, 206, 169);
+}
+
 h1 {
     font-family: 'Shrikhand', cursive;
     font-size: 3em;
@@ -43,13 +50,13 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: bold;
-    background: rgb(6, 6, 66);
+    background: var(--darkblue);
     color: white;
     padding: 10px
 }
 
 .song-name-modal {
-    background: rgb(173, 134, 4);
+    background: var(--darkyellow);
 }
 
 .submit-comment {
@@ -58,11 +65,20 @@ footer {
     padding: 2px 10px;
     border: 1px;
     border-radius: 5px;
+    background: var(--lightblue);
+}
+
+.song-comment-submit {
+    background: var(--lightyellow);
 }
 
 .submit-comment:hover {
-    background: rgb(63, 62, 62);
+    background: var(--darkblue);
     color: white;
+}
+
+.song-comment-submit:hover {
+    background: var(--darkyellow);
 }
 
 .dropdown-content {
@@ -103,6 +119,15 @@ footer {
     border-radius: 10px;
 }
 
+.add-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
 li {
     margin-left: 20px;
 }
@@ -121,6 +146,11 @@ li {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.add-album-inner-text {
+    font-size: 1em;
+    height: 2rem;
 }
 
 

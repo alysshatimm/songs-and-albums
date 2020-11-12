@@ -65,6 +65,12 @@ header {
     grid-template-columns: 300px 1fr;
 }
 
+.add-extras {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+}
+
 .song-modal-block {
     display: grid;
     grid-template-columns: 500px 1fr;

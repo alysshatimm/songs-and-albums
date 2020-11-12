@@ -67,7 +67,7 @@
                                                             <input placeholder="Your Name" type="text" name="authorText" id="author-input" class="modal-input">
                                                             <input placeholder="Headline" type="text" name="headlineText" id="headline-input" class="modal-input">
                                                             <input placeholder="Add New Comment" type="text" name="commentText" id="comments-input" class="modal-input">
-                                                            <button class="submit-comment" type="submit">Submit</button>
+                                                            <button class="submit-comment song-comment-submit" type="submit">Submit</button>
                                                         </form>
                                                         <div class="comments">
                                                             <p class="comment">
@@ -145,30 +145,32 @@
             </button>
             <div id="modals" class="dropdown-content">
                 <div id="album-modal-add" class="modal">
-                    <div class="modal-content">
+                    <div class="add-modal-content">
                         <span class="close close-add">&times;</span>
-                        <h2 class="album-name-modal">ExampleAlbum</h2>
-                        <div class="modal-block">
-                            <div class="song-block">
-                                <ol class="songs-name-list">
-                                    <li class="song-name">Urgent</li>
-                                    <li class="song-name">Juke Box Hero</li>
-                                </ol>
-                                <ol class="song-duration-list">
-                                    <p class="duration">3.46</p>
-                                    <p class="duration">2.57</p>
-                                </ol>
-                            </div>
-                            <div class="comment-block">
+                        <h2 class="album-name-modal">
+                            <label for="new-album-input"></label>
+                            <input placeholder="New Album Name" type="text" name="newAlbumText" id="new-album-input" class="modal-input add-album-inner-text">
+                        </h2>
+                        <div class="add-modal-block">
+                            <!-- <div class="add-songs-block">   ************For when we decide to add songs*************
                                 <form action="" class="add-comments add-albums">
                                     <label for="author-input"></label>
                                     <label for="headline-input"></label>
                                     <label for="comments-input"></label>
-                                    <input placeholder="Your Name" type="text" name="authorText" id="author-input" class="modal-input">
-                                    <input placeholder="Headline" type="text" name="headlineText" id="headline-input" class="modal-input">
-                                    <input placeholder="Add New Comment" type="text" name="commentText" id="comments-input" class="modal-input">
+                                    <input placeholder="Song Title" type="text" name="authorText" id="author-input" class="modal-input">
+                                    <input placeholder="Song Duration" type="text" name="headlineText" id="headline-input" class="modal-input">
+                                    <input placeholder="YouTube Link" type="text" name="commentText" id="comments-input" class="modal-input">
                                     <button class="submit-comment" type="submit">Submit</button>
                                 </form>
+                            </div> -->
+                            <div class="add-extras">
+                                <label for="artist-input"></label>
+                                <label for="album-image-input"></label>
+                                <label for="new-record-label-input"></label>
+                                <input placeholder="Artist" type="text" name="artistText" id="new-artist-input" class="modal-input">
+                                <input placeholder="Record Label" type="text" name="recordLabelText" id="new-record-label-input" class="modal-input">
+                                <input placeholder="Album Image URL" type="text" name="albumImageText" id="album-image-input" class="modal-input">
+                                <button class="submit-comment" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>
