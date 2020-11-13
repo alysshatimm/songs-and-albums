@@ -11,7 +11,7 @@
 
 <body class="page">
     <header>
-        <h1>Jukebox Heroes</h1>
+        <h1 class="testy">Jukebox Heroes</h1>
     </header>
     <main class="container">
         <div class="dropdown template-album">
@@ -48,7 +48,7 @@
                                                         <button class="delete" type="submit">Delete Song</button>
                                                     </div>
                                                     <div class="comment-block">
-                                                        <p class="average-stars">Average Stars: 3.5</p>
+                                                        <p class="average-stars" id="song-average-stars">Average Stars: 3.5</p>
                                                         <form action="" class="stars add-stars">
                                                             <input id="song-star-5" value="★★★★★" type="radio" name="rating" />
                                                             <label for="song-star-5"></label>
@@ -65,9 +65,9 @@
                                                             <label for="author-input"></label>
                                                             <label for="headline-input"></label>
                                                             <label for="comments-input"></label>
-                                                            <input placeholder="Your Name" type="text" name="authorText" id="author-input" class="modal-input">
-                                                            <input placeholder="Headline" type="text" name="headlineText" id="headline-input" class="modal-input">
-                                                            <input placeholder="Add New Comment" type="text" name="commentText" id="comments-input" class="modal-input">
+                                                            <input placeholder="Your Name" type="text" name="authorText" id="song-author-input" class="modal-input">
+                                                            <input placeholder="Headline" type="text" name="headlineText" id="song-headline-input" class="modal-input">
+                                                            <input placeholder="Add New Comment" type="text" name="commentText" id="song-comments-input" class="modal-input">
                                                             <button class="submit-comment song-comment-submit" type="submit">Submit</button>
                                                         </form>
                                                         <div class="comments">
@@ -98,7 +98,7 @@
                                 <button class="delete-album" type="submit">Delete Album</button>
                             </div>
                             <div class="comment-block">
-                                <p class="average-stars">Average Stars: 3.5</p>
+                                <p class="average-stars" id="album-average-rating">Average Stars: 3.5</p>
                                 <form action="" class="stars add-stars">
                                     <input id="album-star-5" value="★★★★★" type="radio" name="rating" />
                                     <label for="album-star-5"></label>
@@ -115,9 +115,9 @@
                                     <label for="author-input"></label>
                                     <label for="headline-input"></label>
                                     <label for="comments-input"></label>
-                                    <input placeholder="Your Name" type="text" name="authorText" id="author-input" class="modal-input">
-                                    <input placeholder="Headline" type="text" name="headlineText" id="headline-input" class="modal-input">
-                                    <input placeholder="Add New Comment" type="text" name="commentText" id="comments-input" class="modal-input">
+                                    <input placeholder="Your Name" type="text" name="authorText" id="album-author-input" class="modal-input">
+                                    <input placeholder="Headline" type="text" name="headlineText" id="album-headline-input" class="modal-input">
+                                    <input placeholder="Add New Comment" type="text" name="commentText" id="album-comments-input" class="modal-input">
                                     <button class="submit-comment" type="submit">Submit</button>
                                 </form>
                                 <div class="comments">

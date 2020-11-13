@@ -1,30 +1,47 @@
-const albumRating1 = document.getElementById(".song-star-1");
-const albumRating2 = document.getElementById(".song-star-2");
-const albumRating3 = document.getElementById(".song-star-3");
-const albumRating4 = document.getElementById(".song-star-4");
-const albumRating5 = document.getElementById(".song-star-5");
+class AlbumRatings {
+  constructor() {
+    this._albumStars = 25;
+    this._albumRatingCount = 5;
+  }
 
-albumRating1.addEventListener("click", () => {
-    
-})
+  get albumStars() {
+    return this._albumStars;
+  }
 
-albumRating2.addEventListener("click", () => {
-    
-})
+  get ratingCount() {
+    return this._albumRatingCount;
+  }
 
-albumRating3.addEventListener("click", () => {
-    
-})
+  oneStarRating() {
+    this._albumStars += 1;
+    this._albumRatingCount++;
+  }
 
-albumRating4.addEventListener("click", () => {
-    
-})
+  twoStarRating() {
+    this._albumStars += 2;
+    this._albumRatingCount++;
+  }
 
-albumRating5.addEventListener("click", () => {
-    
-})
+  threeStarRating() {
+    this._albumStars += 3;
+    this._albumRatingCount++;
+  }
 
-const averageAlbumRatingCalc  = function () {
-    let totalRatings = ${albumRating.size()}
-    let averageAlbumRating = ${albumRating.albumRating} / totalRatings;
+  fourStarRating() {
+    this._albumStars += 4;
+    this._albumRatingCount++;
+  }
+
+  fiveStarRating() {
+    this._albumStars += 5;
+    this._albumRatingCount++;
+  }
+
+  averageAlbumRating() {
+    let averageAlbumRating = this._albumStars / this._albumRatingCount;
+    averageAlbumRating = Math.round(averageAlbumRating * 10) / 10;
+    return averageAlbumRating;
+  }
 }
+
+export {AlbumRatings};
