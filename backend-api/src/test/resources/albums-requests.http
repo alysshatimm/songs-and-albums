@@ -13,12 +13,16 @@ DELETE localhost:8080/api/albums/1
 POST http://localhost:8080/api/albums
 Content-Type: application/json
 
-{"artist":""}
+{"artist":"KISS", "albumTitle":"Destroyer", "recordLabel":"Party On Records", "albumArt":"https://images-na.ssl-images-amazon.com/images/I/71pceb8qNFL._SX522_.jpg"}
 
 ### Update an album resource
 
 
-### Update an album's
+### Update an album's song list
+POST http://localhost:8080/api/albums/34/songs
+Content-Type: application/json
+
+{"album":"Destroyer", "songTitle":"Detroit Rock City", "duration":"2:47", "songLink":"www.youtube.com"}
 
 
 ### Add a new album resource
