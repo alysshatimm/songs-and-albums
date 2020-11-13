@@ -42,10 +42,6 @@ header {
     padding-right: 20px;
 }
 
-.song-block {
-    padding-left: 20px;
-}
-
 .comment {
     padding: 10px;
     display: grid;
@@ -84,6 +80,7 @@ header {
 .song-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
 }
 
 img {
@@ -93,4 +90,17 @@ img {
 .song {
     display: flex;
     align-items: center;
+}
+
+.delete {
+    grid-column-start: 1;
+}
+
+.duration {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.delete-album {
+    grid-column: 1 / -1;
 }
