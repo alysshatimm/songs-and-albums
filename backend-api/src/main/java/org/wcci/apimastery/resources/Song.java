@@ -18,8 +18,10 @@ public class Song {
     @GeneratedValue
     private Long id;
     @OneToMany(mappedBy = "song")
+    @JsonIgnore
     private Set<SongRating> songRatings;
     @OneToMany(mappedBy = "song")
+    @JsonIgnore
     private Set<SongComment> songComments;
 
     protected Song() {

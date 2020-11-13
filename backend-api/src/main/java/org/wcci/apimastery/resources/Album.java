@@ -19,11 +19,13 @@ public class Album {
     @GeneratedValue
     private Long id;
     @OneToMany(mappedBy = "album")
-    @JsonIgnore
+
     private Set<Song> songs;
     @OneToMany(mappedBy = "album")
+    @JsonIgnore
     private Set<AlbumRating> albumRatings;
     @OneToMany(mappedBy = "album")
+    @JsonIgnore
     private Set<AlbumComment> albumComments;
 
     protected Album(){

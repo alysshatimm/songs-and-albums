@@ -26,24 +26,24 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Album four = new Album("Foreigner", "4", "Cheez Wiz", "www.picture.com");
+        Album four = new Album("Foreigner", "4", "Cheez Wiz", "https://upload.wikimedia.org/wikipedia/en/e/e4/Foreigner_-_4.jpg");
         albumStorage.saveAlbum(four);
-        Album merriweatherPostPavillion = new Album("Animal Collective", "Merriweather Post Pavillion", "Big Hat Guys", "www.picture2.com");
+        Album merriweatherPostPavillion = new Album("Animal Collective", "Merriweather Post Pavillion", "Big Hat Guys", "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Animal_Collective_-_Merriweather_Post_Pavilion.png/220px-Animal_Collective_-_Merriweather_Post_Pavilion.png");
         albumStorage.saveAlbum(merriweatherPostPavillion);
-        Album whiteBloodCells = new Album("The White Stripes", "White Blood Cells", "Third Man Records", "www.picture3.com");
+        Album whiteBloodCells = new Album("The White Stripes", "White Blood Cells", "Third Man Records", "https://media.pitchfork.com/photos/5929aa18c0084474cd0c1141/1:1/w_600/b39a21f4.jpeg");
         albumStorage.saveAlbum(whiteBloodCells);
 
-        Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "www.youtube.com");
+        Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(jukeboxHero);
-        Song urgent = new Song(four, "Urgent", "2:52", "www.youtube.com");
+        Song urgent = new Song(four, "Urgent", "2:52", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(urgent);
-        Song myGirls = new Song(merriweatherPostPavillion, "My Girls", "4:30", "www.youtube.com");
+        Song myGirls = new Song(merriweatherPostPavillion, "My Girls", "4:30", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(myGirls);
-        Song blueish = new Song(merriweatherPostPavillion, "Blueish", "6:00", "www.youtube.com");
+        Song blueish = new Song(merriweatherPostPavillion, "Blueish", "6:00", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(blueish);
-        Song deadLeaves = new Song(whiteBloodCells, "Dead Leaves and the Dirty Ground", "3:20", "www.youtube.com");
+        Song deadLeaves = new Song(whiteBloodCells, "Dead Leaves and the Dirty Ground", "3:20", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(deadLeaves);
-        Song hotelYorba = new Song(whiteBloodCells, "Hotel Yorba", "2:50", "youtube.com");
+        Song hotelYorba = new Song(whiteBloodCells, "Hotel Yorba", "2:50", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(hotelYorba);
 
         AlbumComment great = new AlbumComment(four, "David", "Super great!", "Album is so great I can't stand it");

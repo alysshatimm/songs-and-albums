@@ -41,7 +41,7 @@ public class AlbumControllerTest {
     @Test
     public void retrieveAllAlbumsShouldBeMappedCorrectly() throws Exception{
         MockMvc mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
-        mockMvc.perform(get("/api/campuses"))
+        mockMvc.perform(get("/api/albums"))
                 .andExpect(status().isOk());
     }
 }
