@@ -1,5 +1,7 @@
 package org.wcci.apimastery.resources;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
@@ -7,6 +9,7 @@ import java.util.Set;
 @Entity
 public class Song {
     @ManyToOne
+    @JsonIgnore
     private Album album;
     private String songTitle;
     private String duration;
@@ -15,11 +18,13 @@ public class Song {
     @GeneratedValue
     private Long id;
     @OneToMany(mappedBy = "song")
+    @JsonIgnore
     private Set<SongRating> songRatings;
     @OneToMany(mappedBy = "song")
+    @JsonIgnore
     private Set<SongComment> songComments;
 
-    protected Song(){
+    protected Song() {
 
     }
 

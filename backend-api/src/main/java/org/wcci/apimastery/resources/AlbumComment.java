@@ -21,14 +21,6 @@ public class AlbumComment {
 
     }
 
-    public AlbumComment(Album album, String author, String headline, String comment, Long id) {
-        this.album = album;
-        this.author = author;
-        this.headline = headline;
-        this.comment = comment;
-        this.id = id;
-    }
-
     public AlbumComment(Album album, String author, String headline, String comment) {
         this.album = album;
         this.author = author;
