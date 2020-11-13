@@ -11,171 +11,169 @@
 
 <body class="page">
     <header>
-        <h1 class="testy">Jukebox Heroes</h1>
+        <h1>Jukebox Heroes</h1>
     </header>
-    <main class="container">
-        <div class="dropdown template-album">
-            <button id="album-button" class="dropbtn">
-                <img class="album-art" src="http://getreadytorock.me.uk/blog/wp-content/uploads/2014/11/Foreigner-4-1024x1024.jpg" alt="Album Artwork">
-                <h2 class="artist">Foreigner</h2>
-                <h3 class="album-name">4</h3>
-                <h4 class="record-label">Atlantic Records</h4>
-                
-            </button>
+    <main class="container dropdown">
+        <button id="album-button" class="dropbtn">
+            <img class="album-art" src="http://getreadytorock.me.uk/blog/wp-content/uploads/2014/11/Foreigner-4-1024x1024.jpg" alt="Album Artwork">
+            <h2 class="artist">Foreigner</h2>
+            <h3 class="album-name">4</h3>
+            <h4 class="record-label">Atlantic Records</h4>
+            
+        </button>
 
-            <!-- Start Album Modal********************************************* -->
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 id="album-name-modal-title" class="album-name-modal modal-title">4</h2>
+        <!-- Start Album Modal********************************************* -->
+        <div id="modals" class="dropdown-content">
+            <div id="album-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="album-name-modal-title" class="album-name-modal modal-title">4</h2>
 
-                        <div class="modal-block">
-                            <div class="song-block">
-                                <ol class="songs-name-list">
-                                    <li id="song-button" class="song-name">Urgent</li>
+                    <div class="modal-block">
+                        <div class="song-block">
+                            <ol class="songs-name-list">
+                                <li id="song-button" class="song-name">Urgent</li>
 
-                                    <!-- Start Song Modal****************************************************************** -->
-                                    <div id="modals" class="dropdown-content">
-                                        <div id="song-modal" class="modal">
-                                            <div class="modal-content">
-                                                <span class="close song-close">&times;</span>
-                                                <h2 id="song-name-modal-title" class="song-name-modal modal-title">"Urgent"</h2>
-                                                <div class="song-modal-block">
-                                                    <div class="song-block">
-                                                        <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-                                                        </iframe>
-                                                        <button class="delete" type="submit">Delete Song</button>
-                                                    </div>
-                                                    <div class="comment-block">
-                                                        <p class="average-stars" id="song-average-stars">Average Stars: 3.5</p>
-                                                        <form action="" class="stars add-stars">
-                                                            <input id="song-star-5" value="★★★★★" type="radio" name="rating" />
-                                                            <label for="song-star-5"></label>
-                                                            <input id="song-star-4" value="★★★★" type="radio" name="rating" />
-                                                            <label for="song-star-4"></label>
-                                                            <input id="song-star-3" value="★★★" type="radio" name="rating" />
-                                                            <label for="song-star-3"></label>
-                                                            <input id="song-star-2" value="★★" type="radio" name="rating" />
-                                                            <label for="song-star-2"></label>
-                                                            <input id="song-star-1" value="★" type="radio" name="rating" />
-                                                            <label for="song-star-1"></label>
-                                                        </form>
-                                                        <form action="" class="add-comments">
-                                                            <label for="author-input"></label>
-                                                            <label for="headline-input"></label>
-                                                            <label for="comments-input"></label>
-                                                            <input placeholder="Your Name" type="text" name="authorText" id="song-author-input" class="modal-input">
-                                                            <input placeholder="Headline" type="text" name="headlineText" id="song-headline-input" class="modal-input">
-                                                            <input placeholder="Add New Comment" type="text" name="commentText" id="song-comments-input" class="modal-input">
-                                                            <button class="submit-comment song-comment-submit" type="submit">Submit</button>
-                                                        </form>
-                                                        <div class="comments">
-                                                            <p class="comment">
-                                                                <p class="author">Abigail</p>
-                                                                <p class="headline">#Foreigners </p>
-                                                                <p class="comment">A magnificent new premier named McDonald Trump rose to power and made America great again! He also became buddies with tough guy leaders from around the world.</p>
-                                                            </p>
-                                                            <p class="comment">
-                                                                <p class="author">Levi</p>
-                                                                <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
-                                                                <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will
-                                                                    make Mexico pay for that wall. Mark my words.</p>
-                                                            </p>
-                                                        </div>
+                                <!-- Start Song Modal****************************************************************** -->
+                                <div id="modals" class="dropdown-content">
+                                    <div id="song-modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close song-close">&times;</span>
+                                            <h2 id="song-name-modal-title" class="song-name-modal modal-title">"Urgent"</h2>
+                                            <div class="song-modal-block">
+                                                <div class="song-block">
+                                                    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                                                    </iframe>
+                                                    <button class="delete" type="submit">Delete Song</button>
+                                                </div>
+                                                <div class="comment-block">
+                                                    <p class="average-stars" id="song-average-stars">Average Stars: 3.5</p>
+                                                    <form action="" class="stars add-stars">
+                                                        <input id="song-star-5" value="★★★★★" type="radio" name="rating" />
+                                                        <label for="song-star-5"></label>
+                                                        <input id="song-star-4" value="★★★★" type="radio" name="rating" />
+                                                        <label for="song-star-4"></label>
+                                                        <input id="song-star-3" value="★★★" type="radio" name="rating" />
+                                                        <label for="song-star-3"></label>
+                                                        <input id="song-star-2" value="★★" type="radio" name="rating" />
+                                                        <label for="song-star-2"></label>
+                                                        <input id="song-star-1" value="★" type="radio" name="rating" />
+                                                        <label for="song-star-1"></label>
+                                                    </form>
+                                                    <form action="" class="add-comments">
+                                                        <label for="author-input"></label>
+                                                        <label for="headline-input"></label>
+                                                        <label for="comments-input"></label>
+                                                        <input placeholder="Your Name" type="text" name="authorText" id="song-author-input" class="modal-input">
+                                                        <input placeholder="Headline" type="text" name="headlineText" id="song-headline-input" class="modal-input">
+                                                        <input placeholder="Add New Comment" type="text" name="commentText" id="song-comments-input" class="modal-input">
+                                                        <button class="submit-comment song-comment-submit" type="submit">Submit</button>
+                                                    </form>
+                                                    <div class="comments">
+                                                        <p class="comment">
+                                                            <p class="author">Abigail</p>
+                                                            <p class="headline">#Foreigners </p>
+                                                            <p class="comment">A magnificent new premier named McDonald Trump rose to power and made America great again! He also became buddies with tough guy leaders from around the world.</p>
+                                                        </p>
+                                                        <p class="comment">
+                                                            <p class="author">Levi</p>
+                                                            <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
+                                                            <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will
+                                                                make Mexico pay for that wall. Mark my words.</p>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End Song Modal *************************************************** -->
-                                    <li class="song-name">Juke Box Hero</li>
-                                </ol>
-                                <ol class="song-duration-list">
-                                    <p class="duration">3.46</p>
-                                    <p class="duration">2.57</p>
-                                </ol>
-                                <button class="delete-album" type="submit">Delete Album</button>
-                            </div>
-                            <div class="comment-block">
-                                <p class="average-stars" id="album-average-rating">Average Stars: 3.5</p>
-                                <form action="" class="stars add-stars">
-                                    <input id="album-star-5" value="★★★★★" type="radio" name="rating" />
-                                    <label for="album-star-5"></label>
-                                    <input id="album-star-4" value="★★★★" type="radio" name="rating" />
-                                    <label for="album-star-4"></label>
-                                    <input id="album-star-3" value="★★★" type="radio" name="rating" />
-                                    <label for="album-star-3"></label>
-                                    <input id="album-star-2" value="★★" type="radio" name="rating" />
-                                    <label for="album-star-2"></label>
-                                    <input id="album-star-1" value="★" type="radio" name="rating" />
-                                    <label for="album-star-1"></label>
-                                </form>
-                                <form action="" class="add-comments">
-                                    <label for="author-input"></label>
-                                    <label for="headline-input"></label>
-                                    <label for="comments-input"></label>
-                                    <input placeholder="Your Name" type="text" name="authorText" id="album-author-input" class="modal-input">
-                                    <input placeholder="Headline" type="text" name="headlineText" id="album-headline-input" class="modal-input">
-                                    <input placeholder="Add New Comment" type="text" name="commentText" id="album-comments-input" class="modal-input">
-                                    <button class="submit-comment" type="submit">Submit</button>
-                                </form>
-                                <div class="comments">
-                                    <p class="comment">
-                                        <p class="author">Abigail</p>
-                                        <p class="headline">#Foreigners </p>
-                                        <p class="comment">A magnificent new premier named McDonald Trump rose to power and made America great again! He also became buddies with tough guy leaders from around the world.</p>
-                                    </p>
-                                    <p class="comment">
-                                        <p class="author">Levi</p>
-                                        <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
-                                        <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that
-                                            wall. Mark my words.</p>
-                                    </p>
                                 </div>
+                                <!-- End Song Modal *************************************************** -->
+                                <li class="song-name">Juke Box Hero</li>
+                            </ol>
+                            <ol class="song-duration-list">
+                                <p class="duration">3.46</p>
+                                <p class="duration">2.57</p>
+                            </ol>
+                            <button class="delete-album" type="submit">Delete Album</button>
+                        </div>
+                        <div class="comment-block">
+                            <p class="average-stars" id="album-average-rating">Average Stars: 3.5</p>
+                            <form action="" class="stars add-stars">
+                                <input id="album-star-5" value="★★★★★" type="radio" name="rating" />
+                                <label for="album-star-5"></label>
+                                <input id="album-star-4" value="★★★★" type="radio" name="rating" />
+                                <label for="album-star-4"></label>
+                                <input id="album-star-3" value="★★★" type="radio" name="rating" />
+                                <label for="album-star-3"></label>
+                                <input id="album-star-2" value="★★" type="radio" name="rating" />
+                                <label for="album-star-2"></label>
+                                <input id="album-star-1" value="★" type="radio" name="rating" />
+                                <label for="album-star-1"></label>
+                            </form>
+                            <form action="" class="add-comments">
+                                <label for="author-input"></label>
+                                <label for="headline-input"></label>
+                                <label for="comments-input"></label>
+                                <input placeholder="Your Name" type="text" name="authorText" id="album-author-input" class="modal-input">
+                                <input placeholder="Headline" type="text" name="headlineText" id="album-headline-input" class="modal-input">
+                                <input placeholder="Add New Comment" type="text" name="commentText" id="album-comments-input" class="modal-input">
+                                <button class="submit-comment" type="submit">Submit</button>
+                            </form>
+                            <div class="comments">
+                                <p class="comment">
+                                    <p class="author">Abigail</p>
+                                    <p class="headline">#Foreigners </p>
+                                    <p class="comment">A magnificent new premier named McDonald Trump rose to power and made America great again! He also became buddies with tough guy leaders from around the world.</p>
+                                </p>
+                                <p class="comment">
+                                    <p class="author">Levi</p>
+                                    <p class="headline">Actually, it's *Foreigner* not Foreigners.</p>
+                                    <p class="comment">I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that
+                                        wall. Mark my words.</p>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Album Modal********************************************* -->
-            <button id="add-album-button" class="dropbtn">
-                <img class="album-art" src="https://img.freepik.com/free-photo/black-vinyl-record-yellow-background_23-2147889810.jpg?size=338&ext=jpg" alt="Album Artwork">
-                <h2 class="artist">Add an Album</h2>
-                <h3 class="album-name">Click Here</h3>
-                <h4 class="record-label">To Add a New Record</h4>
-            </button>
-            <div id="modals" class="dropdown-content">
-                <div id="album-modal-add" class="modal">
-                    <div class="add-modal-content">
-                        <span class="close close-add">&times;</span>
-                        <h2 class="album-name-modal">
-                            <label for="new-album-input"></label>
-                            <input placeholder="New Album Name" type="text" name="newAlbumText" id="new-album-input" class="modal-input add-album-inner-text">
-                        </h2>
-                        <div class="add-modal-block">
-                            <!-- <div class="add-songs-block">   ************For when we decide to add songs*************
-                                <form action="" class="add-comments add-albums">
-                                    <label for="author-input"></label>
-                                    <label for="headline-input"></label>
-                                    <label for="comments-input"></label>
-                                    <input placeholder="Song Title" type="text" name="authorText" id="author-input" class="modal-input">
-                                    <input placeholder="Song Duration" type="text" name="headlineText" id="headline-input" class="modal-input">
-                                    <input placeholder="YouTube Link" type="text" name="commentText" id="comments-input" class="modal-input">
-                                    <button class="submit-comment" type="submit">Submit</button>
-                                </form>
-                            </div> -->
-                            <div class="add-extras">
-                                <label for="artist-input"></label>
-                                <label for="album-image-input"></label>
-                                <label for="new-record-label-input"></label>
-                                <label for="number-of-songs-input"></label>
-                                <input placeholder="Artist" type="text" name="artistText" id="new-artist-input" class="modal-input">
-                                <input placeholder="Record Label" type="text" name="recordLabelText" id="new-record-label-input" class="modal-input">
-                                <input placeholder="Album Image URL" type="text" name="albumImageText" id="album-image-input" class="modal-input">
-                                <input placeholder="Number of Songs" type="text" name="numberOfSongsText" id="number-of-songs-input" class="modal-input">
+        </div>
+        <!-- End Album Modal********************************************* -->
+        <button id="add-album-button" class="dropbtn">
+            <img class="album-art" src="https://img.freepik.com/free-photo/black-vinyl-record-yellow-background_23-2147889810.jpg?size=338&ext=jpg" alt="Album Artwork">
+            <h2 class="artist">Add an Album</h2>
+            <h3 class="album-name">Click Here</h3>
+            <h4 class="record-label">To Add a New Record</h4>
+        </button>
+        <div id="modals" class="dropdown-content">
+            <div id="album-modal-add" class="modal">
+                <div class="add-modal-content">
+                    <span class="close close-add">&times;</span>
+                    <h2 class="album-name-modal">
+                        <label for="new-album-input"></label>
+                        <input placeholder="New Album Name" type="text" name="newAlbumText" id="new-album-input" class="modal-input add-album-inner-text">
+                    </h2>
+                    <div class="add-modal-block">
+                        <!-- <div class="add-songs-block">   ************For when we decide to add songs*************
+                            <form action="" class="add-comments add-albums">
+                                <label for="author-input"></label>
+                                <label for="headline-input"></label>
+                                <label for="comments-input"></label>
+                                <input placeholder="Song Title" type="text" name="authorText" id="author-input" class="modal-input">
+                                <input placeholder="Song Duration" type="text" name="headlineText" id="headline-input" class="modal-input">
+                                <input placeholder="YouTube Link" type="text" name="commentText" id="comments-input" class="modal-input">
                                 <button class="submit-comment" type="submit">Submit</button>
-                            </div>
+                            </form>
+                        </div> -->
+                        <div class="add-extras">
+                            <label for="artist-input"></label>
+                            <label for="album-image-input"></label>
+                            <label for="new-record-label-input"></label>
+                            <label for="number-of-songs-input"></label>
+                            <input placeholder="Artist" type="text" name="artistText" id="new-artist-input" class="modal-input">
+                            <input placeholder="Record Label" type="text" name="recordLabelText" id="new-record-label-input" class="modal-input">
+                            <input placeholder="Album Image URL" type="text" name="albumImageText" id="album-image-input" class="modal-input">
+                            <input placeholder="Number of Songs" type="text" name="numberOfSongsText" id="number-of-songs-input" class="modal-input">
+                            <button class="submit-comment" type="submit">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -185,5 +183,4 @@
     <footer>♫ Keep Listening ♫</footer>
     <script src="/src/js/app.js " type="module"></script>
 </body>
-
 </html>
