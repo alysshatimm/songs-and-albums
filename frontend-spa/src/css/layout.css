@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: 200px auto 50px;
+}
+
+footer {
+    justify-self: center;
+    align-self: end;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 20px;
+}
+
+.dropbtn {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-block {
+    width: 100%;
+    padding-right: 20px;
+}
+
+.comment {
+    padding: 10px;
+    display: grid;
+}
+
+.modal-content {
+    padding-bottom: 20px;
+}
+
+.add-comments {
+    display: grid;
+    padding-right: 20px;
+}
+
+.modal-block {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.add-extras {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.song-modal-block {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+
+.album-name-modal,
+.song-name-modal {
+    margin-bottom: 20px;
+}
+
+.song-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+}
+
+.delete {
+    grid-column-start: 1;
+}
+
+.duration {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.delete-album {
+    grid-column: 1 / -1;
+}
