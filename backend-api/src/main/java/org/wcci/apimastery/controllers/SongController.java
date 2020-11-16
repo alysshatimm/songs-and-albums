@@ -1,5 +1,6 @@
 package org.wcci.apimastery.controllers;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,9 +16,9 @@ public class SongController {
     private SongRepository songRepo;
 
 
-    @PostMapping("/api/albums/{id}")
-    public Iterable<Song> addSong(@RequestBody Song songToAdd){
-        songRepo.save(songToAdd);
-        return albumStorage.retrieveAlbumById(songToAdd.getId())
-    }
+//    @PostMapping("/api/albums/{id}/songs")
+//    public Iterable<Song> addSong(@RequestBody Song songToAdd, @PathVariable Long id){
+//        songRepo.save(songToAdd);
+//        return (Iterable<Song>) albumStorage.retrieveAlbumById(songToAdd.getId());
+//    }
 }
