@@ -1,98 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300&display=swap");
 body {
-  background-image: url(https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg);
-  background-size: cover;
+    background-image: url(https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg);
+    background-size: cover;
 }
 
 :root {
-  --darkblue: rgb(6, 6, 66);
-  --lightblue: rgb(136, 136, 177);
-  --darkyellow: rgb(173, 134, 4);
-  --lightyellow: rgb(218, 206, 169);
+    --darkblue: rgb(6, 6, 66);
+    --lightblue: rgb(136, 136, 177);
+    --darkyellow: rgb(173, 134, 4);
+    --lightyellow: rgb(218, 206, 169);
 }
 
 h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 3em;
-  letter-spacing: 2px;
-  word-spacing: 6px;
+    font-family: "Shrikhand", cursive;
+    font-size: 3em;
+    letter-spacing: 2px;
+    word-spacing: 6px;
 }
 
 footer {
-  font-family: "Shrikhand", cursive;
+    font-family: "Shrikhand", cursive;
 }
 
 .artist {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 .album-name,
 .record-label {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .duration,
 .comments,
 .average-stars,
 .modal-input {
-  font-family: "Poppins", sans-serif;
-  font-style: italic;
-  font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 300;
 }
 
 .song-name {
-  font-family: "Poppins", sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .album-name-modal,
 .song-name-modal {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  background: var(--darkblue);
-  color: white;
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    background: var(--darkblue);
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 
 .song-name-modal {
-  background: var(--darkyellow);
+    background: var(--darkyellow);
 }
 
 .submit-comment {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  padding: 2px 10px;
-  border: 1px;
-  border-radius: 5px;
-  background: var(--lightblue);
-  margin-bottom: 25px;
-  cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 2px 10px;
+    border: 1px;
+    border-radius: 5px;
+    background: var(--lightblue);
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 
 .delete {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  padding: 2px 10px;
-  border: 1px;
-  border-radius: 5px;
-  background: rgb(100, 4, 4);
-  color: white;
-  width: 420px;
-  height: 50px;
-  cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 2px 10px;
+    border: 1px;
+    border-radius: 5px;
+    background: rgb(100, 4, 4);
+    color: white;
+    width: 420px;
+    height: 50px;
+    cursor: pointer;
 }
 
 .delete:hover {
-  background: rgb(226, 0, 0);
-  color: black;
+    background: rgb(226, 0, 0);
+    color: black;
 }
 
 .delete-album {
@@ -114,120 +114,121 @@ footer {
 }
 
 .song-comment-submit {
-  background: var(--lightyellow);
-  cursor: pointer;
+    background: var(--lightyellow);
+    cursor: pointer;
 }
 
 .submit-comment:hover {
-  background: var(--darkblue);
-  color: white;
+    background: var(--darkblue);
+    color: white;
 }
 
 .song-comment-submit:hover {
-  background: var(--darkyellow);
+    background: var(--darkyellow);
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  max-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    max-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-width: 600px;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 600px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 1000px;
-  border-radius: 10px;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
 }
 
 .add-modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
 li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  padding-right: 20px;
-  padding-top: 10px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .add-album-inner-text {
-  font-size: 1em;
-  height: 2rem;
+    font-size: 1em;
+    height: 2rem;
 }
+
 
 /* Stars */
 
 .stars {
-  display: inline-block;
+    display: inline-block;
 }
 
 .stars input {
-  display: none;
+    display: none;
 }
 
 .stars label {
-  float: right;
-  font-size: 24px;
-  color: #444;
-  transition: all 0.2s;
-  padding-right: 5px;
-  margin-right: 10px;
+    float: right;
+    font-size: 24px;
+    color: #444;
+    transition: all 0.2s;
+    padding-right: 5px;
+    margin-right: 10px;
 }
 
 .stars label:before {
-  content: "\2605";
-  font-style: none;
+    content: "\2605";
+    font-style: none;
 }
 
-.stars input:checked ~ label:before {
-  color: gold;
-  transition: all 0.25s;
+.stars input:checked~label:before {
+    color: gold;
+    transition: all 0.25s;
 }
 
 .stars label:hover {
-  transform: scale(1.3);
+    transform: scale(1.3);
 }

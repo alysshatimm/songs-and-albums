@@ -1,5 +1,5 @@
-import {AlbumRatings} from "./album.js"
-import {SongRatings} from "./song.js"
+import { AlbumRatings } from "./albumRatings.js"
+import { SongRatings } from "./songRatings.js"
 
 const albumRatings = new AlbumRatings();
 const songRatings = new SongRatings();
@@ -95,7 +95,7 @@ albumRating5.addEventListener("click", () => {
 
 let albumRatingText = document.getElementById("album-average-rating");
 const updateAlbumRating = function() {
-albumRatingText.innerText = (`Average Rating:  ${albumRatings.averageAlbumRating()}`);
+    albumRatingText.innerText = (`Average Rating:  ${albumRatings.averageAlbumRating()}`);
 };
 updateAlbumRating();
 

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+
+/* front page******************************************* */
+
 body {
     margin-left: 20px;
     margin-right: 20px;
@@ -28,18 +31,32 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, 300px);
     column-gap: 20px;
+    justify-content: left;
 }
 
 .dropbtn {
     margin-right: 15px;
     margin-bottom: 15px;
+    width: fit-content;
 }
+
+.modal-content {
+    padding-bottom: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+
+/* common modal ************************************************************ */
 
 .comment-block {
     width: 100%;
     padding-right: 20px;
+    margin-left: 30px;
 }
 
 .comment {
@@ -47,33 +64,12 @@ header {
     display: grid;
 }
 
-.modal-content {
-    padding-bottom: 20px;
-}
-
 .add-comments {
     display: grid;
     padding-right: 20px;
 }
 
-.modal-block {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-}
-
-.add-extras {
-    display: grid;
-    justify-content: center;
-    row-gap: 10px;
-}
-
-.song-modal-block {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-}
-
-.album-name-modal,
-.song-name-modal {
+.modal-title {
     margin-bottom: 20px;
 }
 
@@ -83,14 +79,36 @@ header {
     padding-left: 20px;
 }
 
-img {
-    width: 300px;
+
+/* album modal*********************************************************** */
+
+.modal-block {
+    display: grid;
+    grid-template-columns: 300px 1fr;
 }
 
-.song {
+
+/* song modal **************************************************************** */
+
+.song-modal-block {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+
+
+/* add modal*************************************************************************** */
+
+.add-extras {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+
+/* .song {
     display: flex;
     align-items: center;
-}
+} */
 
 .delete {
     grid-column-start: 1;
