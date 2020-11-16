@@ -1,5 +1,12 @@
 import { AlbumRatings } from "./albumRatings.js"
 import { SongRatings } from "./songRatings.js"
+import { displayHomeView } from "./displayHomeView.js"
+import { allAlbums } from "./sampleAllAlbumsJson.js";
+
+
+
+
+
 
 const albumRatings = new AlbumRatings();
 const songRatings = new SongRatings();
@@ -137,3 +144,5 @@ const updateSongRating = function() {
     songRatingText.innerText = (`Average Rating: ${songRatings.averageSongRating()}`);
 }
 updateSongRating();
+
+document.getElementById("container").appendChild(displayHomeView(allAlbums));
