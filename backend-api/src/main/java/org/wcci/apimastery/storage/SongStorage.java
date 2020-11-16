@@ -17,5 +17,7 @@ public class SongStorage {
 
     public Song retrieveSongById(Long id){return songRepo.findById(id).get();}
 
+    public void deleteSongById(Long id){songRepo.deleteById(id);};
+
 
 }
