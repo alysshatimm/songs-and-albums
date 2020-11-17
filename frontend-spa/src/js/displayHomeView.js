@@ -11,6 +11,7 @@ const displayHomeView = function (albums) {
   albums.forEach((album) => {
     let albumButton = document.createElement("button");
     albumButton.classList.add("dropbtn");
+    albumButton.id = (`album-button${album.id}`)
     let albumImage = document.createElement("img");
     albumImage.classList.add("album-art");
     albumImage.src = album.albumArt;
@@ -28,6 +29,7 @@ const displayHomeView = function (albums) {
     albumButton.appendChild(albumName);
     albumButton.appendChild(recordLabel);
     mainElement.appendChild(albumButton);
+    
   });
 
   return mainElement;

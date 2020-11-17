@@ -2,7 +2,7 @@ import { AlbumRatings } from "./albumRatings.js"
 import { SongRatings } from "./songRatings.js"
 import { displayHomeView } from "./displayHomeView.js"
 import { allAlbums } from "./sampleAllAlbumsJson.js";
-
+import { displayAlbumView } from "./displaySingleAlbum.js"
 
 
 
@@ -12,44 +12,60 @@ const albumRatings = new AlbumRatings();
 const songRatings = new SongRatings();
 
 // MODAL DISPLAY FUNCTIONS
+var modal = document.getElementById("album-modal");
+var button1 = document.getElementById("album-button");
+var span = document.getElementById("close");
+
+button1.onclick = function () {
+  modal.style.display = "block";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 
+// var modalAdd = document.getElementById("album-modal-add");
+// var buttonAdd = document.getElementById("add-album-button");
+// var spanAdd = document.getElementsByClassName("close-add")[0];
 
-var modalAdd = document.getElementById("album-modal-add");
-var buttonAdd = document.getElementById("add-album-button");
-var spanAdd = document.getElementsByClassName("close-add")[0];
+// buttonAdd.onclick = function() {
+//     modalAdd.style.display = "block";
+// }
 
-buttonAdd.onclick = function() {
-    modalAdd.style.display = "block";
-}
+// spanAdd.onclick = function() {
+//     modalAdd.style.display = "none";
+// }
 
-spanAdd.onclick = function() {
-    modalAdd.style.display = "none";
-}
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modalAdd.style.display = "none";
+//     }
+// }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modalAdd.style.display = "none";
-    }
-}
+// var modalSong = document.getElementById("song-modal");
+// var buttonSong = document.getElementById("song-button");
+// var spanSong = document.getElementsByClassName("song-close")[0];
 
-var modalSong = document.getElementById("song-modal");
-var buttonSong = document.getElementById("song-button");
-var spanSong = document.getElementsByClassName("song-close")[0];
+// buttonSong.onclick = function() {
+//     modalSong.style.display = "block";
+// }
 
-buttonSong.onclick = function() {
-    modalSong.style.display = "block";
-}
+// spanSong.onclick = function() {
+//     modalSong.style.display = "none";
+// }
 
-spanSong.onclick = function() {
-    modalSong.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modalSong.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modalSong.style.display = "none";
+//     }
+// }
 
 // UPDATE ALBUM RATINGS
 
@@ -130,3 +146,4 @@ const updateSongRating = function() {
 updateSongRating();
 
 document.getElementById("container").appendChild(displayHomeView(allAlbums));
+document.getElementById("container").appendChild(displayAlbumView(allAlbums));
