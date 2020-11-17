@@ -42,7 +42,6 @@ public class AlbumController {
     @DeleteMapping("/api/albums/{id}")
     public Iterable<Album> deleteAlbumById(@PathVariable Long id) {
         albumStorage.deleteAlbumById(id);
-
         return albumStorage.retrieveAllAlbums();
     }
     @PostMapping("/api/albums/{id}/songs")

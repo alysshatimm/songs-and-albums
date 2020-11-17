@@ -32,6 +32,19 @@ public class Populator implements CommandLineRunner {
         albumStorage.saveAlbum(merriweatherPostPavillion);
         Album whiteBloodCells = new Album("The White Stripes", "White Blood Cells", "Third Man Records", "https://media.pitchfork.com/photos/5929aa18c0084474cd0c1141/1:1/w_600/b39a21f4.jpeg");
         albumStorage.saveAlbum(whiteBloodCells);
+        Album mothershipConnection = new Album("Parliment", "Mothership Connection", "Umbrella Time", "https://www.udiscovermusic.com/wp-content/uploads/2015/10/Parliament-Mothership-Connection-album.jpg");
+        albumStorage.saveAlbum(mothershipConnection);
+        Album drumsAndWires = new Album("XTC", "Drums and Wires", "Yahoo Records", "https://upload.wikimedia.org/wikipedia/en/5/53/XTC_Drums_and_Wires.jpg");
+        albumStorage.saveAlbum(drumsAndWires);
+        Album awakenMyLove = new Album("Childish Gambino", "Awaken, My Love!", "Big Kid Time", "https://upload.wikimedia.org/wikipedia/en/1/10/Childish_Gambino_-_Awaken%2C_My_Love%21.png");
+        albumStorage.saveAlbum(awakenMyLove);
+        Album remainInLight = new Album("Talking Heads", "Remain in Light", "Sire Records", "https://media.pitchfork.com/photos/5bbba0095817d4032087c55a/1:1/w_600/talking%20heads_remain%20in%20light.jpg");
+        albumStorage.saveAlbum(remainInLight);
+        Album getToHeaven = new Album("Everything Everything", "Get To Heaven", "Indie Rock Records", "https://blog.discogs.com/wp-content/uploads/2018/01/everything-everything.jpg");
+        albumStorage.saveAlbum(getToHeaven);
+
+
+
 
         Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(jukeboxHero);
