@@ -1,64 +1,69 @@
-import {AlbumRatings} from "./album.js"
-import {SongRatings} from "./song.js"
+import { AlbumRatings } from "./albumRatings.js";
+import { SongRatings } from "./songRatings.js";
+import { displayHomeView } from "./displayHomeView.js";
+import { allAlbums } from "./sampleAllAlbumsJson.js";
+import { displaySingleAlbum } from "./displaySingleAlbum.js";
 
 const albumRatings = new AlbumRatings();
 const songRatings = new SongRatings();
-
+document.getElementById("container").appendChild(displayHomeView(allAlbums));
+document.getElementById("container").appendChild(displaySingleAlbum());
 // MODAL DISPLAY FUNCTIONS
+
 
 var modal = document.getElementById("album-modal");
 var button1 = document.getElementById("album-button");
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementById("close");
 
-button1.onclick = function() {
-    modal.style.display = "block";
-}
+button1.onclick = function () {
+  modal.style.display = "block";
+};
 
-span.onclick = function() {
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
     modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+  }
+};
 
 var modalAdd = document.getElementById("album-modal-add");
 var buttonAdd = document.getElementById("add-album-button");
 var spanAdd = document.getElementsByClassName("close-add")[0];
 
-buttonAdd.onclick = function() {
-    modalAdd.style.display = "block";
-}
+buttonAdd.onclick = function () {
+  modalAdd.style.display = "block";
+};
 
-spanAdd.onclick = function() {
+spanAdd.onclick = function () {
+  modalAdd.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
     modalAdd.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modalAdd.style.display = "none";
-    }
-}
+  }
+};
 
 var modalSong = document.getElementById("song-modal");
 var buttonSong = document.getElementById("song-button");
 var spanSong = document.getElementsByClassName("song-close")[0];
 
-buttonSong.onclick = function() {
-    modalSong.style.display = "block";
-}
+buttonSong.onclick = function () {
+  modalSong.style.display = "block";
+};
 
-spanSong.onclick = function() {
+spanSong.onclick = function () {
+  modalSong.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
     modalSong.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modalSong.style.display = "none";
-    }
-}
+  }
+};
 
 // UPDATE ALBUM RATINGS
 
@@ -69,33 +74,33 @@ const albumRating4 = document.getElementById("album-star-4");
 const albumRating5 = document.getElementById("album-star-5");
 
 albumRating1.addEventListener("click", () => {
-    albumRatings.oneStarRating();
-    updateAlbumRating();
-})
+  albumRatings.oneStarRating();
+  updateAlbumRating();
+});
 
 albumRating2.addEventListener("click", () => {
-    albumRatings.twoStarRating();
-    updateAlbumRating();
-})
+  albumRatings.twoStarRating();
+  updateAlbumRating();
+});
 
 albumRating3.addEventListener("click", () => {
-    albumRatings.threeStarRating();
-    updateAlbumRating();
-})
+  albumRatings.threeStarRating();
+  updateAlbumRating();
+});
 
 albumRating4.addEventListener("click", () => {
-    albumRatings.fourStarRating();
-    updateAlbumRating();
-})
+  albumRatings.fourStarRating();
+  updateAlbumRating();
+});
 
 albumRating5.addEventListener("click", () => {
-    albumRatings.fiveStarRating();
-    updateAlbumRating();
-})
+  albumRatings.fiveStarRating();
+  updateAlbumRating();
+});
 
 let albumRatingText = document.getElementById("album-average-rating");
-const updateAlbumRating = function() {
-albumRatingText.innerText = (`Average Rating:  ${albumRatings.averageAlbumRating()}`);
+const updateAlbumRating = function () {
+  albumRatingText.innerText = `Average Rating:  ${albumRatings.averageAlbumRating()}`;
 };
 updateAlbumRating();
 
@@ -108,32 +113,34 @@ const songRating4 = document.getElementById("song-star-4");
 const songRating5 = document.getElementById("song-star-5");
 
 songRating1.addEventListener("click", () => {
-    songRatings.oneStarRating();
-    updateSongRating();
-})
+  songRatings.oneStarRating();
+  updateSongRating();
+});
 
 songRating2.addEventListener("click", () => {
-    songRatings.twoStarRating();
-    updateSongRating();
-})
+  songRatings.twoStarRating();
+  updateSongRating();
+});
 
 songRating3.addEventListener("click", () => {
-    songRatings.threeStarRating();
-    updateSongRating();
-})
+  songRatings.threeStarRating();
+  updateSongRating();
+});
 
 songRating4.addEventListener("click", () => {
-    songRatings.fourStarRating();
-    updateSongRating();
-})
+  songRatings.fourStarRating();
+  updateSongRating();
+});
 
 songRating5.addEventListener("click", () => {
-    songRatings.fiveStarRating();
-    updateSongRating();
-})
+  songRatings.fiveStarRating();
+  updateSongRating();
+});
 
 let songRatingText = document.getElementById("song-average-stars");
-const updateSongRating = function() {
-    songRatingText.innerText = (`Average Rating: ${songRatings.averageSongRating()}`);
-}
+const updateSongRating = function () {
+  songRatingText.innerText = `Average Rating: ${songRatings.averageSongRating()}`;
+};
 updateSongRating();
+
+
