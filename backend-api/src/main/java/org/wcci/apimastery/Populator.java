@@ -42,8 +42,12 @@ public class Populator implements CommandLineRunner {
         albumStorage.saveAlbum(remainInLight);
         Album getToHeaven = new Album("Everything Everything", "Get To Heaven", "Indie Rock Records", "https://blog.discogs.com/wp-content/uploads/2018/01/everything-everything.jpg");
         albumStorage.saveAlbum(getToHeaven);
-
-
+        Album marqueeMoon = new Album("Television", "Marquee Moon", "Elektra Records", "https://s3.amazonaws.com/media.thecrimson.com/photos/2018/02/21/214843_1328237.jpg");
+        albumStorage.saveAlbum(marqueeMoon);
+        Album francesTheMute = new Album("The Mars Volta", "Frances The Mute", "Planet Records", "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/99bd31fd-b68e-4fa6-b351-62173827ac21/67.jpg");
+        albumStorage.saveAlbum(francesTheMute);
+        Album thirtySixChambers = new Album("Wu-Tang Clan", "36 Chambers", "Loud Records", "https://images-na.ssl-images-amazon.com/images/I/71BUBWTvyhL._SL1500_.jpg");
+        albumStorage.saveAlbum(thirtySixChambers);
 
 
         Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
@@ -58,6 +62,20 @@ public class Populator implements CommandLineRunner {
         songRepo.save(deadLeaves);
         Song hotelYorba = new Song(whiteBloodCells, "Hotel Yorba", "2:50", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
         songRepo.save(hotelYorba);
+        Song pFunk = new Song(mothershipConnection, "P-Funk Wants To Get Funked Up", "7:41", "https://www.youtube.com/watch?v=ZyJzylk8d_M");
+        songRepo.save(pFunk);
+        Song unfunkyUfo = new Song(mothershipConnection, "Unfunky UFO", "4:24", "https://www.youtube.com/watch?v=JtobYqDQV54");
+        songRepo.save(unfunkyUfo);
+        Song makingPlans = new Song(drumsAndWires, "Making Plans For Nigel", "5:20", "https://www.youtube.com/watch?v=s29RKnB7l7o");
+        songRepo.save(makingPlans);
+        Song outsideWorld = new Song(drumsAndWires, "Outside World", "3:18", "https://www.youtube.com/watch?v=UacEJL9QZEM");
+        songRepo.save(outsideWorld);
+        Song redbone = new Song(awakenMyLove, "Redbone", "5:17", "https://www.youtube.com/watch?v=Kp7eSUU9oy8");
+        songRepo.save(redbone);
+        Song california = new Song(awakenMyLove, "California", "4:20", "https://www.youtube.com/watch?v=zGTnrUJZVbU&list=PLKV0-mxqLb8evOx8-4EeLEH91AAc5wvdt&index=7");
+        songRepo.save(california);
+
+
 
         AlbumComment great = new AlbumComment(four, "David", "Super great!", "Album is so great I can't stand it");
         albumCommentRepo.save(great);
