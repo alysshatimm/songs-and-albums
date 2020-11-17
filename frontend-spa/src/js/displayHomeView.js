@@ -5,6 +5,9 @@ import { allAlbums } from "./sampleAllAlbumsJson.js";
 const displayHomeView = function (albums) {
   const mainElement = document.createElement("main");
   mainElement.classList.add("container");
+  mainElement.classList.add("dropdown");
+  mainElement.classList.add("template-album");
+  mainElement.id = ("container")
 
   // let campusListHtml = "";
 

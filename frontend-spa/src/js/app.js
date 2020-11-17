@@ -6,7 +6,8 @@ import { displaySingleAlbum } from "./displaySingleAlbum.js";
 
 const albumRatings = new AlbumRatings();
 const songRatings = new SongRatings();
-
+document.getElementById("container").appendChild(displayHomeView(allAlbums));
+document.getElementById("container").appendChild(displaySingleAlbum());
 // MODAL DISPLAY FUNCTIONS
 
 
@@ -142,4 +143,4 @@ const updateSongRating = function () {
 };
 updateSongRating();
 
-document.getElementById("container").appendChild(displayHomeView(allAlbums));
+

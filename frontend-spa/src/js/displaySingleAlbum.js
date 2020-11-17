@@ -1,10 +1,10 @@
 import { allAlbums } from "./sampleAllAlbumsJson.js";
 import { displayHomeView } from "./displayHomeView.js"
 
-const displaySingleAlbum = function () {
+const displaySingleAlbum = function (albums) {
     const main = document.querySelector(".container")
     
-    album.forEach((album) => {
+    albums.forEach((album) => {
     let outerAlbumDiv = document.createElement("div");
     outerAlbumDiv.classList.add("dropdown-content");
     outerAlbumDiv.id = (`album-modal${album.id}`);
