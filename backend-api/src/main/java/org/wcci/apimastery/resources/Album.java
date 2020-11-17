@@ -2,10 +2,7 @@ package org.wcci.apimastery.resources;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 
@@ -18,13 +15,13 @@ public class Album {
     @Id
     @GeneratedValue
     private Long id;
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, orphanRemoval = true)
 
     private Set<Song> songs;
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "album" , cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<AlbumRating> albumRatings;
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "album" , cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<AlbumComment> albumComments;
 
