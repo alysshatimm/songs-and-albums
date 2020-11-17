@@ -3,7 +3,7 @@
 GET http://localhost:8080/api/albums/34
 
 ### Delete a song with the given id
-DELETE localhost:8080/api/albums/1/song/5
+DELETE localhost:8080/api/songs/9
 
 
 ### Post a new song resource

@@ -20,12 +20,13 @@ public class SongController {
         this.songStorage = songStorage;
     }
 
-    @DeleteMapping("/api/albums/{id}/song/{id}")
-    public Album deleteSongById(@PathVariable Long id) {
+    @DeleteMapping("/api/songs/{id}")
+        public Album deleteSong(@PathVariable Long id){
+        Album songAlbum = songStorage.retrieveSongById(id).getAlbum();
         songStorage.deleteSongById(id);
-        return albumStorage.retrieveAlbumById(id);
-
+        return albumStorage.retrieveAlbumById(songAlbum.getId());
     }
+
 }
 
 
