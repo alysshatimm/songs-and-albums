@@ -1,8 +1,13 @@
-const displayAlbumView = function (album) {
-  album.forEach((album) => {
+import { allAlbums } from "./sampleAllAlbumsJson.js";
+import { displayHomeView } from "./displayHomeView.js"
+
+const displaySingleAlbum = function () {
+    const main = document.querySelector(".container")
+    
+    album.forEach((album) => {
     let outerAlbumDiv = document.createElement("div");
     outerAlbumDiv.classList.add("dropdown-content");
-    outerAlbumDiv.id = (`modal${album.id}`);
+    outerAlbumDiv.id = (`album-modal${album.id}`);
     let albumDiv = document.createElement("div");
     albumDiv.classList.add("modal");
     albumDiv.id = (`album-modal${album.id}`)
@@ -161,23 +166,14 @@ const displayAlbumView = function (album) {
       "I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that wall. Mark my words.";
     albumCommentOutterP.appendChild(albumCommentCommentP);
 
-    var modal = document.getElementById(`album-modal${album.id}`);
-    var button1 = document.getElementById(`album-button${album.id}`);
-    var span = document.getElementById(`close${album.id}`);
+    main.appendChild(outerAlbumDiv);
 
-    button1.onclick = function () {
-      modal.style.display = "block";
-    };
+    
 
-    span.onclick = function () {
-      modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
   });
 };
-export { displayAlbumView };
+
+
+
+
+export { displaySingleAlbum };

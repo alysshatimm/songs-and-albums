@@ -1,4 +1,4 @@
-import { displayAlbumView } from "./displaySingleAlbum.js";
+import { displaySingleAlbum } from "./displaySingleAlbum.js";
 import { allAlbums } from "./sampleAllAlbumsJson.js";
 
 
