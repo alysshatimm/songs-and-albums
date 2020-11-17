@@ -17,10 +17,10 @@ public class Song {
     @Id
     @GeneratedValue
     private Long id;
-    @OneToMany(mappedBy = "song")
+    @OneToMany(mappedBy = "song" , cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<SongRating> songRatings;
-    @OneToMany(mappedBy = "song")
+    @OneToMany(mappedBy = "song" , cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<SongComment> songComments;
 

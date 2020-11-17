@@ -1,30 +1,25 @@
-### Get all albums
-GET http://localhost:8080/api/albums
-Accept: application/json
 
-### Get an album with the given id
+### Get a song with given id
 GET http://localhost:8080/api/albums/34
 
-### Delete an album with the given id
-DELETE localhost:8080/api/albums/1
+### Delete a song with the given id
+DELETE localhost:8080/api/songs/9
 
 
-### Post a new album resource
+### Post a new song resource
 POST http://localhost:8080/api/albums
 Content-Type: application/json
 
 {"artist":"KISS", "albumTitle":"Destroyer", "recordLabel":"Party On Records", "albumArt":"https://images-na.ssl-images-amazon.com/images/I/71pceb8qNFL._SX522_.jpg"}
 
-### Update an album resource
+### Update a song resource
 
 
-### Update an album's song list
+### Update an song
 POST http://localhost:8080/api/albums/34/songs
 Content-Type: application/json
 
 {"album":"Destroyer", "songTitle":"Detroit Rock City", "duration":"2:47", "songLink":"www.youtube.com"}
 
 
-### Add a new album resource
-
-
+### Add a new song resource
