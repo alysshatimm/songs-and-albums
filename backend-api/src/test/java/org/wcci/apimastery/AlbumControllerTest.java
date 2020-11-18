@@ -3,6 +3,7 @@ package org.wcci.apimastery;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+
 import static org.mockito.Mockito.mock;
 
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.wcci.apimastery.controllers.AlbumController;
 import org.wcci.apimastery.resources.Album;
+import org.wcci.apimastery.storage.AlbumCommentRepository;
 import org.wcci.apimastery.storage.AlbumStorage;
 import org.wcci.apimastery.storage.SongRepository;
 import org.wcci.apimastery.storage.SongStorage;
@@ -26,24 +28,25 @@ public class AlbumControllerTest {
     private AlbumController underTest;
     private SongRepository songRepo;
     private SongStorage songStorage;
+    private AlbumCommentRepository albumCommentRepo;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         albumStorage = mock(AlbumStorage.class);
-        underTest = new AlbumController(albumStorage, songRepo, songStorage);
+        underTest = new AlbumController(albumStorage, songRepo, songStorage, albumCommentRepo);
         when(albumStorage.retrieveAllAlbums()).thenReturn(Collections.singletonList(new Album("Justin Timberlake", "I like Cheese", "Cheese Parade", "www.picture.com")));
 
     }
 
     @Test
-    public void shouldRetrieveAllAlbums(){
+    public void shouldRetrieveAllAlbums() {
         Iterable<Album> albums = underTest.retrieveAllAlbums();
         Assertions.assertThat(albums).contains(new Album("Justin Timberlake", "I like Cheese", "Cheese Parade", "www.picture.com"));
 
     }
 
     @Test
-    public void retrieveAllAlbumsShouldBeMappedCorrectly() throws Exception{
+    public void retrieveAllAlbumsShouldBeMappedCorrectly() throws Exception {
         MockMvc mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
         mockMvc.perform(get("/api/albums"))
                 .andExpect(status().isOk());

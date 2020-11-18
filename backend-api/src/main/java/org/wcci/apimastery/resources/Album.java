@@ -95,4 +95,6 @@ public class Album {
                 ", id=" + id +
                 '}';
     }
+
+    public void changeTitle(String newTitle) { albumTitle = newTitle; }
 }
