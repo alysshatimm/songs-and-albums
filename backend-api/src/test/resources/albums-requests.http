@@ -16,7 +16,9 @@ Content-Type: application/json
 {"artist":"KISS", "albumTitle":"Destroyer", "recordLabel":"Party On Records", "albumArt":"https://images-na.ssl-images-amazon.com/images/I/71pceb8qNFL._SX522_.jpg"}
 
 ### Update an album resource
+PATCH http://localhost:8080/api/albums/1/albumTitle
 
+FlavorTown
 
 ### Update an album's song list
 POST http://localhost:8080/api/albums/34/songs

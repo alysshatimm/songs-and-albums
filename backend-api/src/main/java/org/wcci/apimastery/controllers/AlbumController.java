@@ -51,4 +51,12 @@ public class AlbumController {
         songRepo.save(song);
         return song;
     }
+
+    @PatchMapping("/api/albums/{id}/albumTitle")
+    public Album changeAlbumTitle(@RequestBody String newTitle, @PathVariable Long id) {
+        Album albumToChangeTitle = albumStorage.retrieveAlbumById(id);
+        albumToChangeTitle.changeTitle(newTitle);
+        albumStorage.saveAlbum(albumToChangeTitle);
+        return albumToChangeTitle;
+    }
 }
