@@ -90,4 +90,6 @@ public class Song {
                 ", id=" + id +
                 '}';
     }
+
+    public void changeSongTitle(String newSongTitle) { songTitle = newSongTitle;}
 }

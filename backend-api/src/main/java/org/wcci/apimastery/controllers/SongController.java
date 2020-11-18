@@ -27,6 +27,14 @@ public class SongController {
         return albumStorage.retrieveAlbumById(songAlbum.getId());
     }
 
+    @PatchMapping("/api/songs/{id}/songTitle")
+        public Song changeSongTitle(@RequestBody String newSongTitle, @PathVariable Long id) {
+        Song songToChange = songStorage.retrieveSongById(id);
+        songToChange.changeSongTitle(newSongTitle);
+        songStorage.saveSong(songToChange);
+        return songToChange;
+    }
+
 }
 
 

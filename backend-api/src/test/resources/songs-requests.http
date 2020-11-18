@@ -13,7 +13,9 @@ Content-Type: application/json
 {"artist":"KISS", "albumTitle":"Destroyer", "recordLabel":"Party On Records", "albumArt":"https://images-na.ssl-images-amazon.com/images/I/71pceb8qNFL._SX522_.jpg"}
 
 ### Update a song resource
+PATCH http://localhost:8080/api/songs/12/songTitle
 
+Pajama Time
 
 ### Update an song
 POST http://localhost:8080/api/albums/34/songs
