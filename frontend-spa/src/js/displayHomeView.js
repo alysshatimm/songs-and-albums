@@ -68,16 +68,50 @@ const displayHomeView = function(albums) {
         album.songs.forEach((songs) => {
             let songName = document.createElement("li");
             songName.classList.add("song-name");
-            songName.id = "song-button";
+            songName.id = (`song-button${songs.id}`);
             songName.innerText = songs.songTitle;
             songList.appendChild(songName);
-
             let songDurationTimes = document.createElement("p");
             songDurationTimes.classList.add("duration");
             songDurationTimes.innerText = songs.duration;
             songDuration.appendChild(songDurationTimes);
-        });
 
+
+            let outerSongDiv = document.createElement("div");
+            outerSongDiv.classList.add("dropdown-content");
+            mainElement.appendChild(outerSongDiv);
+            let songDiv = document.createElement("div");
+            songDiv.classList.add("modal");
+            songDiv.id = (`song-modal${songs.id}`)
+            outerSongDiv.appendChild(songDiv);
+            let innerSongDiv = document.createElement("div");
+            innerSongDiv.classList.add("modal-content");
+            songDiv.appendChild(innerSongDiv);
+            let songSpan = document.createElement("span");
+            songSpan.classList.add("close");
+            songSpan.id = (`song-close${songs.id}`);
+            songSpan.innerText = "&times;";
+            innerSongDiv.appendChild(songSpan)
+
+            // var songModal = document.getElementById(`song-modal${songs.id}`);
+            // var songButton = document.getElementById(`song-button${songs.id}`);
+            // var songSpan = document.getElementById(`song-close${songs.id}`);
+
+            // songButton.onclick = function() {
+            //     songModal.style.display = "block";
+            // };
+
+            // songSpan.onclick = function() {
+            //     songModal.style.display = "none";
+            // };
+
+            // window.onclick = function(event) {
+            //     if (event.target == songModal) {
+            //         songModal.style.display = "none";
+            //     }
+            // };
+
+        });
 
         let albumDeleteButton = document.createElement("button");
         albumDeleteButton.classList.add("delete-album");
@@ -206,7 +240,6 @@ const displayHomeView = function(albums) {
         var button = document.getElementById(`album-button${album.id}`);
         var span = document.getElementById(`close${album.id}`);
 
-        // span.style.color = "red"
         button.onclick = function() {
             modal.style.display = "block";
         };
@@ -220,6 +253,9 @@ const displayHomeView = function(albums) {
                 modal.style.display = "none";
             }
         };
+
+
+
 
     });
 
