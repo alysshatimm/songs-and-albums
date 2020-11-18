@@ -50,17 +50,17 @@ public class Populator implements CommandLineRunner {
         albumStorage.saveAlbum(thirtySixChambers);
 
 
-        Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song jukeboxHero = new Song(four, "JukeBox Hero", "3:47", "https://www.youtube.com/watch?v=W_TOsFvnmeQ");
         songRepo.save(jukeboxHero);
-        Song urgent = new Song(four, "Urgent", "2:52", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song urgent = new Song(four, "Urgent", "2:52", "https://www.youtube.com/watch?v=Lcb-Fsx_phM");
         songRepo.save(urgent);
-        Song myGirls = new Song(merriweatherPostPavillion, "My Girls", "4:30", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song myGirls = new Song(merriweatherPostPavillion, "My Girls", "4:30", "https://www.youtube.com/watch?v=zol2MJf6XNE");
         songRepo.save(myGirls);
-        Song blueish = new Song(merriweatherPostPavillion, "Blueish", "6:00", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song blueish = new Song(merriweatherPostPavillion, "Blueish", "6:00", "https://www.youtube.com/watch?v=YTCg1Ovu64E");
         songRepo.save(blueish);
-        Song deadLeaves = new Song(whiteBloodCells, "Dead Leaves and the Dirty Ground", "3:20", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song deadLeaves = new Song(whiteBloodCells, "Dead Leaves and the Dirty Ground", "3:20", "https://www.youtube.com/watch?v=7OyytKqYjkE");
         songRepo.save(deadLeaves);
-        Song hotelYorba = new Song(whiteBloodCells, "Hotel Yorba", "2:50", "https://www.youtube.com/embed/tgbNymZ7vqY?controls=0");
+        Song hotelYorba = new Song(whiteBloodCells, "Hotel Yorba", "2:50", "https://www.youtube.com/watch?v=DZPEUyiNcjA");
         songRepo.save(hotelYorba);
         Song pFunk = new Song(mothershipConnection, "P-Funk Wants To Get Funked Up", "7:41", "https://www.youtube.com/watch?v=ZyJzylk8d_M");
         songRepo.save(pFunk);
@@ -74,6 +74,26 @@ public class Populator implements CommandLineRunner {
         songRepo.save(redbone);
         Song california = new Song(awakenMyLove, "California", "4:20", "https://www.youtube.com/watch?v=zGTnrUJZVbU&list=PLKV0-mxqLb8evOx8-4EeLEH91AAc5wvdt&index=7");
         songRepo.save(california);
+        Song bornUnderPunches = new Song(remainInLight, "Born Under Punches", "3:16", "https://www.youtube.com/watch?v=Y8xdsZhfrcA");
+        songRepo.save(bornUnderPunches);
+        Song crosseyedAndPainless = new Song(remainInLight, "Crosseyed and Painless", "2:22", "https://www.youtube.com/watch?v=_Zrkf65GmwE");
+        songRepo.save(crosseyedAndPainless);
+        Song toTheBlade = new Song(getToHeaven, "To The Blade", "5:55", "https://www.youtube.com/watch?v=7EeSjfPQYMs");
+        songRepo.save(toTheBlade);
+        Song gettoHeaven = new Song(getToHeaven, "Get To Heaven","7:00", "https://www.youtube.com/watch?v=wo9htBgju58");
+        songRepo.save(gettoHeaven);
+        Song seeNoEvil = new Song(marqueeMoon, "See No Evil", "3:47", "https://www.youtube.com/watch?v=a7L0IYPXKj8");
+        songRepo.save(seeNoEvil);
+        Song venus = new Song(marqueeMoon, "Venus", "4:45", "https://www.youtube.com/watch?v=4f3d5ZdE4vY");
+        songRepo.save(venus);
+        Song theWidow = new Song(francesTheMute, "The Widow", "9:56", "https://www.youtube.com/watch?v=VUBQLnEGHNk");
+        songRepo.save(theWidow);
+        Song lViaLViaquez = new Song(francesTheMute, "L'Via L'Viaquez", "8:56", "https://www.youtube.com/watch?v=VUBQLnEGHNk");
+        songRepo.save(lViaLViaquez);
+        Song bringDaRuckus = new Song(thirtySixChambers, "Bring Da Ruckus", "4:20", "https://www.youtube.com/watch?v=bhE4bdoWAAE");
+        songRepo.save(bringDaRuckus);
+        Song cream = new Song(thirtySixChambers, "C.R.E.A.M.", "4:20", "https://www.youtube.com/watch?v=PBwAxmrE194&ab_channel=WuTangClanVEVO");
+        songRepo.save(cream);
 
 
 
@@ -89,6 +109,38 @@ public class Populator implements CommandLineRunner {
         albumCommentRepo.save(yay);
         AlbumComment ok = new AlbumComment(whiteBloodCells, "David", "It's just ok", "Elephant was better");
         albumCommentRepo.save(ok);
+        AlbumComment comment7 = new AlbumComment(mothershipConnection, "George", "PhunkaDelik","Gotta have that FUNK");
+        albumCommentRepo.save(comment7);
+        AlbumComment comment8 = new AlbumComment(mothershipConnection, "Clinton","Atomic","The aliens know how to party");
+        albumCommentRepo.save(comment8);
+        AlbumComment comment9 = new AlbumComment(drumsAndWires, "Nigel","On One","The Title says it all");
+        albumCommentRepo.save(comment9);
+        AlbumComment comment10 = new AlbumComment(drumsAndWires, "Boris", "Boop Beep Boop", "Dun dun nun");
+        albumCommentRepo.save(comment10);
+        AlbumComment comment11 = new AlbumComment(awakenMyLove, "Danny","Ayyye","Never too old for this ish.");
+        albumCommentRepo.save(comment11);
+        AlbumComment comment12 = new AlbumComment(awakenMyLove, "Artuer", "Breathtaking", "Bringing back that old style R&B");
+        albumCommentRepo.save(comment12);
+        AlbumComment comment13 = new AlbumComment(remainInLight, "David", "Edgy","Saw them at CBGB's");
+        albumCommentRepo.save(comment13);
+        AlbumComment comment14 = new AlbumComment(remainInLight, "Freddy","Yeah","Uh Huh");
+        albumCommentRepo.save(comment14);
+        AlbumComment comment15 = new AlbumComment(getToHeaven, "Barbara Streisand", "This Album's  Neat-o", "I like to listen to this album while I do my coding homework!");
+        albumCommentRepo.save(comment15);
+        AlbumComment comment16 = new AlbumComment(getToHeaven, "Jeff Goldblum", "Clever Album", "This album, uh, uh, finds a groove");
+        albumCommentRepo.save(comment16);
+        AlbumComment comment17 = new AlbumComment(marqueeMoon, "Tony the Tiger", "It's ggrrREEEAAATT!", "This album keeps me company while I eat Frosted Flakes!");
+        albumCommentRepo.save(comment17);
+        AlbumComment comment18 = new AlbumComment(marqueeMoon, "Betty White", "My favorite casette tape", "When I walk around the mall with my WalkMan, this is my favorite tape to listen to!");
+        albumCommentRepo.save(comment18);
+        AlbumComment comment19 = new AlbumComment(francesTheMute, "Alyssha", "Drive to Work Jamz", "I try to time my commute to the longer songs - it's awesome!");
+        albumCommentRepo.save(comment19);
+        AlbumComment comment20 = new AlbumComment(francesTheMute, "David", "From At the Drive In to Now...", "Been rockin' out to this stuff for a MINUTE. Seeing them perform live was the highlight of my life.");
+        albumCommentRepo.save(comment20);
+        AlbumComment comment21 = new AlbumComment(thirtySixChambers, "Martha Stewart", "Here bc of Snoop", "I'd have never listened to this album if it weren't for my good friend Mr. Dogg. I now play it at all my dinner parties in Cape Cod");
+        albumCommentRepo.save(comment21);
+        AlbumComment comment22 = new AlbumComment(thirtySixChambers, "Joe Biden", "A.R.E.A.M", "This album rules everything around me. #SWAG.");
+        albumCommentRepo.save(comment22);
 
         AlbumRating rating1 = new AlbumRating(four, 5);
         albumRatingRepo.save(rating1);
