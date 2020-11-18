@@ -1,5 +1,7 @@
 import { displaySingleAlbum } from "./displaySingleAlbum.js";
 import { allAlbums } from "./sampleAllAlbumsJson.js";
+import { AlbumRatings } from "./albumRatings.js";
+import { SongRatings } from "./songRatings.js";
 
 
 const displayHomeView = function(albums) {
@@ -119,7 +121,8 @@ const displayHomeView = function(albums) {
             songModalBlock.appendChild(songCommentBlock)
             let songAverageStars = document.createElement("p");
             songAverageStars.classList.add("average-stars");
-            songAverageStars.id = `song-average-rating${songs.id}`;
+            songAverageStars.id = `${songs.id}song-average-stars`;
+            songModalBlock.appendChild(songAverageStars)
             songCommentBlock.appendChild(songAverageStars);
             let songRatingForm = document.createElement("form");
             songRatingForm.classList.add("stars");
@@ -203,7 +206,6 @@ const displayHomeView = function(albums) {
             songCommentTextInput.name = "commentText";
             songCommentTextInput.id = `${songs.id}song-comment-input`;
             songCommentForm.appendChild(songCommentTextInput);
-
             let songSubmitCommentButton = document.createElement("button");
             songSubmitCommentButton.classList.add("submit-comment");
             songSubmitCommentButton.type = "submit";
@@ -231,6 +233,46 @@ const displayHomeView = function(albums) {
                 }
             };
 
+            const songRating1 = document.getElementById(`${songs.id}song-star-1`);
+            const songRating2 = document.getElementById(`${songs.id}song-star-2`);
+            const songRating3 = document.getElementById(`${songs.id}song-star-3`);
+            const songRating4 = document.getElementById(`${songs.id}song-star-4`);
+            const songRating5 = document.getElementById(`${songs.id}song-star-5`);
+
+            const songRating = new SongRatings()
+
+            songRating1.addEventListener("click", () => {
+                songRating.oneStarRating();
+                updateSongRating();
+            });
+
+            songRating2.addEventListener("click", () => {
+                songRating.twoStarRating();
+                updateSongRating();
+            });
+
+            songRating3.addEventListener("click", () => {
+                songRating.threeStarRating();
+                updateSongRating();
+            });
+
+            songRating4.addEventListener("click", () => {
+                songRating.fourStarRating();
+                updateSongRating();
+            });
+
+            songRating5.addEventListener("click", () => {
+                songRating.fiveStarRating();
+                updateSongRating();
+            });
+
+
+            let songRatingText = document.getElementById(`${songs.id}song-average-stars`);
+            const updateSongRating = function() {
+                songRatingText.innerText = `Average Rating: ${songRating.averageSongRating()}`;
+            };
+            updateSongRating();
+
         });
 
         let albumDeleteButton = document.createElement("button");
@@ -243,14 +285,14 @@ const displayHomeView = function(albums) {
         albumModalBlock.appendChild(commentBlock)
         let averageStars = document.createElement("p");
         averageStars.classList.add("average-stars");
-        averageStars.id = "album-average-rating";
+        averageStars.id = `album-average-rating${album.id}`;
         commentBlock.appendChild(averageStars);
         let albumRatingForm = document.createElement("form");
         albumRatingForm.classList.add("stars");
         albumRatingForm.classList.add("add-stars")
         commentBlock.appendChild(albumRatingForm);
         let albumStarFiveInput = document.createElement("input");
-        albumStarFiveInput.id = "album-star-5";
+        albumStarFiveInput.id = `album-star-5${album.id}`;
         albumStarFiveInput.value = "★★★★★";
         albumStarFiveInput.type = "radio";
         albumStarFiveInput.name = "rating";
@@ -259,7 +301,7 @@ const displayHomeView = function(albums) {
         albumStarFiveLabel.for = "album-star-5";
         albumRatingForm.appendChild(albumStarFiveLabel);
         let albumStarFourInput = document.createElement("input");
-        albumStarFourInput.id = "album-star-4";
+        albumStarFourInput.id = `album-star-4${album.id}`;
         albumStarFourInput.value = "★★★★";
         albumStarFourInput.type = "radio";
         albumStarFourInput.name = "rating";
@@ -268,7 +310,7 @@ const displayHomeView = function(albums) {
         albumStarFourLabel.for = "album-star-4";
         albumRatingForm.appendChild(albumStarFourLabel);
         let albumStarThreeInput = document.createElement("input");
-        albumStarThreeInput.id = "album-star-3";
+        albumStarThreeInput.id = `album-star-3${album.id}`;
         albumStarThreeInput.value = "★★★";
         albumStarThreeInput.type = "radio";
         albumStarThreeInput.name = "rating";
@@ -277,7 +319,7 @@ const displayHomeView = function(albums) {
         albumStarThreeLabel.for = "album-star-3";
         albumRatingForm.appendChild(albumStarThreeLabel);
         let albumStarTwoInput = document.createElement("input");
-        albumStarTwoInput.id = "album-star-2";
+        albumStarTwoInput.id = `album-star-2${album.id}`;
         albumStarTwoInput.value = "★★";
         albumStarTwoInput.type = "radio";
         albumStarTwoInput.name = "rating";
@@ -286,7 +328,7 @@ const displayHomeView = function(albums) {
         albumStarTwoLabel.for = "album-star-2";
         albumRatingForm.appendChild(albumStarTwoLabel);
         let albumStarOneInput = document.createElement("input");
-        albumStarOneInput.id = "album-star-1";
+        albumStarOneInput.id = `album-star-1${album.id}`;
         albumStarOneInput.value = "★";
         albumStarOneInput.type = "radio";
         albumStarOneInput.name = "rating";
@@ -310,21 +352,21 @@ const displayHomeView = function(albums) {
         let albumAuthorTextInput = document.createElement("input");
         albumAuthorTextInput.placeholder = "Your Name";
         albumAuthorTextInput.type = "text";
-        albumAuthorTextInput.name = "authorTex + album.idt";
-        albumAuthorTextInput.id = "album-author-input";
+        albumAuthorTextInput.name = "authorText";
+        albumAuthorTextInput.id = `album-author-input${album.id}`;
         commentForm.appendChild(albumAuthorTextInput);
         albumAuthorInput.classList.add("modal-input");
         let albumHeadlineTextInput = document.createElement("input");
         albumHeadlineTextInput.placeholder = "Headline";
         albumHeadlineTextInput.type = "text";
         albumHeadlineTextInput.name = "headlineText";
-        albumHeadlineTextInput.id = "album-headline-input";
+        albumHeadlineTextInput.id = `album-headline-input${album.id}`;
         commentForm.appendChild(albumHeadlineTextInput);
         let albumCommentTextInput = document.createElement("input");
         albumCommentTextInput.placeholder = "Add New Comment";
         albumCommentTextInput.type = "text";
         albumCommentTextInput.name = "commentText";
-        albumCommentTextInput.id = "album-comment-input";
+        albumCommentTextInput.id = `album-comment-input${album.id}`;
         commentForm.appendChild(albumCommentTextInput);
         let albumSubmitCommentButton = document.createElement("button");
         albumSubmitCommentButton.classList.add("submit-comment");
@@ -374,6 +416,45 @@ const displayHomeView = function(albums) {
             }
         };
 
+
+        const albumRating1 = document.getElementById(`album-star-1${album.id}`);
+        const albumRating2 = document.getElementById(`album-star-2${album.id}`);
+        const albumRating3 = document.getElementById(`album-star-3${album.id}`);
+        const albumRating4 = document.getElementById(`album-star-4${album.id}`);
+        const albumRating5 = document.getElementById(`album-star-5${album.id}`);
+
+        const albumRatings = new AlbumRatings();
+
+        albumRating1.addEventListener("click", () => {
+            albumRatings.oneStarRating();
+            updateAlbumRating();
+        });
+
+        albumRating2.addEventListener("click", () => {
+            albumRatings.twoStarRating();
+            updateAlbumRating();
+        });
+
+        albumRating3.addEventListener("click", () => {
+            albumRatings.threeStarRating();
+            updateAlbumRating();
+        });
+
+        albumRating4.addEventListener("click", () => {
+            albumRatings.fourStarRating();
+            updateAlbumRating();
+        });
+
+        albumRating5.addEventListener("click", () => {
+            albumRatings.fiveStarRating();
+            updateAlbumRating();
+        });
+
+        let albumRatingText = document.getElementById(`album-average-rating${album.id}`);
+        const updateAlbumRating = function() {
+            albumRatingText.innerText = `Average Rating:  ${albumRatings.averageAlbumRating()}`;
+        };
+        updateAlbumRating();
 
 
 

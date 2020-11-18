@@ -7,5 +7,4 @@ const displaySingleAlbum = function(albums) {
 
 
 
-
 export { displaySingleAlbum };
