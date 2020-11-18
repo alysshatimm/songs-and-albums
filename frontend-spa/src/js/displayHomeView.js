@@ -92,24 +92,144 @@ const displayHomeView = function(albums) {
             songSpan.id = (`song-close${songs.id}`);
             songSpan.innerText = "&times;";
             innerSongDiv.appendChild(songSpan)
+            let songTitle = document.createElement("h2")
+            songTitle.classList.add("song-name-modal")
+            songTitle.classList.add("modal-title")
+            songTitle.id = ("song-name-modal-title")
+            songTitle.innerText = songs.songTitle;
+            innerSongDiv.appendChild(songTitle)
+            let songModalBlock = document.createElement("div")
+            songModalBlock.classList.add("song-modal-block")
+            innerSongDiv.appendChild(songModalBlock)
+            let songSongBlock = document.createElement("div")
+            songSongBlock.classList.add("song-block")
+            songModalBlock.appendChild(songSongBlock)
+            let video = document.createElement("iframe")
+            video.width = "420"
+            video.height = "345"
+            video.src = songs.songLink
+            songSongBlock.appendChild(video)
+            let songDeleteButton = document.createElement("button");
+            songDeleteButton.classList.add("delete");
+            songDeleteButton.type = "submit";
+            songDeleteButton.innerText = ("Delete Song")
+            songSongBlock.appendChild(songDeleteButton);
+            let songCommentBlock = document.createElement("div");
+            songCommentBlock.classList.add("comment-block");
+            songModalBlock.appendChild(songCommentBlock)
+            let songAverageStars = document.createElement("p");
+            songAverageStars.classList.add("average-stars");
+            songAverageStars.id = `song-average-rating${songs.id}`;
+            songCommentBlock.appendChild(songAverageStars);
+            let songRatingForm = document.createElement("form");
+            songRatingForm.classList.add("stars");
+            songRatingForm.classList.add("add-stars")
+            songCommentBlock.appendChild(songRatingForm);
 
-            // var songModal = document.getElementById(`song-modal${songs.id}`);
-            // var songButton = document.getElementById(`song-button${songs.id}`);
-            // var songSpan = document.getElementById(`song-close${songs.id}`);
+            let songStarFiveInput = document.createElement("input");
+            songStarFiveInput.id = `${songs.id}song-star-5`;
+            songStarFiveInput.value = "★★★★★";
+            songStarFiveInput.type = "radio";
+            songStarFiveInput.name = "rating";
+            songRatingForm.appendChild(songStarFiveInput);
+            let songStarFiveLabel = document.createElement("label");
+            songStarFiveLabel.for = "song-star-5";
+            songRatingForm.appendChild(songStarFiveLabel);
+            let songStarFourInput = document.createElement("input");
+            songStarFourInput.id = `${songs.id}song-star-4`;
+            songStarFourInput.value = "★★★★";
+            songStarFourInput.type = "radio";
+            songStarFourInput.name = "rating";
+            songRatingForm.appendChild(songStarFourInput);
+            let songStarFourLabel = document.createElement("label");
+            songStarFourLabel.for = "song-star-4";
+            songRatingForm.appendChild(songStarFourLabel);
+            let songStarThreeInput = document.createElement("input");
+            songStarThreeInput.id = `${songs.id}song-star-3`;
+            songStarThreeInput.value = "★★★";
+            songStarThreeInput.type = "radio";
+            songStarThreeInput.name = "rating";
+            songRatingForm.appendChild(songStarThreeInput);
+            let songStarThreeLabel = document.createElement("label");
+            songStarThreeLabel.for = "song-star-3";
+            songRatingForm.appendChild(songStarThreeLabel);
+            let songStarTwoInput = document.createElement("input");
+            songStarTwoInput.id = `${songs.id}song-star-2`;
+            songStarTwoInput.value = "★★";
+            songStarTwoInput.type = "radio";
+            songStarTwoInput.name = "rating";
+            songRatingForm.appendChild(songStarTwoInput);
+            let songStarTwoLabel = document.createElement("label");
+            songStarTwoLabel.for = "song-star-2";
+            songRatingForm.appendChild(songStarTwoLabel);
+            let songStarOneInput = document.createElement("input");
+            songStarOneInput.id = `${songs.id}song-star-1`;
+            songStarOneInput.value = "★";
+            songStarOneInput.type = "radio";
+            songStarOneInput.name = "rating";
+            songRatingForm.appendChild(songStarOneInput);
+            let songStarOneLabel = document.createElement("label");
+            songStarOneLabel.for = "song-star-1";
+            songRatingForm.appendChild(songStarOneLabel);
 
-            // songButton.onclick = function() {
-            //     songModal.style.display = "block";
-            // };
+            let songCommentForm = document.createElement("form");
+            songCommentForm.classList.add("add-comments");
+            songCommentBlock.appendChild(songCommentForm);
+            let songAuthorInput = document.createElement("label");
+            songAuthorInput.for = "author-input";
+            songCommentForm.appendChild(songAuthorInput);
+            let songHeadlineInput = document.createElement("label");
+            songHeadlineInput.for = "headline-input";
+            songCommentForm.appendChild(songHeadlineInput);
+            let songCommentsInput = document.createElement("label");
+            songCommentsInput.for = "comments-input";
+            songCommentForm.appendChild(songCommentsInput);
+            let songAuthorTextInput = document.createElement("input");
+            songAuthorTextInput.placeholder = "Your Name";
+            songAuthorTextInput.type = "text";
+            songAuthorTextInput.name = "authorText";
+            songAuthorTextInput.id = `${songs.id}song-author-input`;
+            songCommentForm.appendChild(songAuthorTextInput);
+            songAuthorInput.classList.add("modal-input");
+            let songHeadlineTextInput = document.createElement("input");
+            songHeadlineTextInput.placeholder = "Headline";
+            songHeadlineTextInput.type = "text";
+            songHeadlineTextInput.name = "headlineText";
+            songHeadlineTextInput.id = `${songs.id}song-headline-input`;
+            songCommentForm.appendChild(songHeadlineTextInput);
+            let songCommentTextInput = document.createElement("input");
+            songCommentTextInput.placeholder = "Add New Comment";
+            songCommentTextInput.type = "text";
+            songCommentTextInput.name = "commentText";
+            songCommentTextInput.id = `${songs.id}song-comment-input`;
+            songCommentForm.appendChild(songCommentTextInput);
 
-            // songSpan.onclick = function() {
-            //     songModal.style.display = "none";
-            // };
+            let songSubmitCommentButton = document.createElement("button");
+            songSubmitCommentButton.classList.add("submit-comment");
+            songSubmitCommentButton.type = "submit";
+            songSubmitCommentButton.innerText = "Submit";
+            songCommentForm.appendChild(songSubmitCommentButton);
 
-            // window.onclick = function(event) {
-            //     if (event.target == songModal) {
-            //         songModal.style.display = "none";
-            //     }
-            // };
+
+
+
+            var songModal = document.getElementById(`song-modal${songs.id}`);
+            var songButton = document.getElementById(`song-button${songs.id}`);
+            var songCloseSpan = document.getElementById(`song-close${songs.id}`);
+
+            songButton.onclick = function() {
+                songModal.style.display = "block";
+            };
+
+            songCloseSpan.onclick = function() {
+                songModal.style.display = "none";
+            };
+
+            window.onclick = function(event) {
+                if (event.target == songModal) {
+                    songModal.style.display = "none";
+                }
+            };
 
         });
 
