@@ -44,8 +44,10 @@ public class SongController {
         SongComment comment = new SongComment(song, songComment.getAuthor(), songComment.getHeadline(), songComment.getComment());
         songCommentRepo.save(comment);
         return comment;
-
-
+    }
+    @GetMapping ("/api/songs/{id}")
+    public Song retrieveSongById(@PathVariable Long id){
+        return songStorage.retrieveSongById(id);
     }
 
 
