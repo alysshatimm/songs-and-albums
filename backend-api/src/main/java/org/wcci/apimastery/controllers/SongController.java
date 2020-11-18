@@ -3,7 +3,9 @@ package org.wcci.apimastery.controllers;
 import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.resources.Album;
 import org.wcci.apimastery.resources.Song;
+import org.wcci.apimastery.resources.SongComment;
 import org.wcci.apimastery.storage.AlbumStorage;
+import org.wcci.apimastery.storage.SongCommentRepository;
 import org.wcci.apimastery.storage.SongRepository;
 import org.wcci.apimastery.storage.SongStorage;
 
@@ -13,11 +15,13 @@ public class SongController {
     private AlbumStorage albumStorage;
     private SongRepository songRepo;
     private SongStorage songStorage;
+    private SongCommentRepository songCommentRepo;
 
-    public SongController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage) {
+    public SongController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage, SongCommentRepository songCommentRepo) {
         this.albumStorage = albumStorage;
         this.songRepo = songRepo;
         this.songStorage = songStorage;
+        this.songCommentRepo = songCommentRepo;
     }
 
     @DeleteMapping("/api/songs/{id}")
@@ -34,22 +38,19 @@ public class SongController {
         songStorage.saveSong(songToChange);
         return songToChange;
     }
+    @PostMapping("/api/songs/{id}/comments")
+    public SongComment addSongComment(@RequestBody SongComment songComment, @PathVariable Long id){
+        Song song = songStorage.retrieveSongById(id);
+        SongComment comment = new SongComment(song, songComment.getAuthor(), songComment.getHeadline(), songComment.getComment());
+        songCommentRepo.save(comment);
+        return comment;
+
+
+    }
+
+
 
 }
 
 
 
-//    @DeleteMapping("/api/albums/{id}")
-//    public Iterable<Album> deleteAlbumById(@PathVariable Long id) {
-//        albumStorage.deleteAlbumById(id);
-//        return albumStorage.retrieveAllAlbums();
-//    }
-//
-//
-//    @PostMapping("/api/albums/{id}/songs")
-//    public Song addSong(@RequestBody Song songToAdd, @PathVariable Long id){
-//        Album songAlbum = albumStorage.retrieveAlbumById(id);
-//        Song song = new Song (songAlbum, songToAdd.getSongTitle(),songToAdd.getDuration(), songToAdd.getSongLink());
-//        songRepo.save(song);
-//        return song;
-//    }
