@@ -14,7 +14,9 @@ body {
 
 .page {
     display: grid;
-    grid-template-rows: 200px auto 50px;
+    grid-template-rows: auto auto 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 footer {
@@ -31,11 +33,15 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 500px);
+    grid-template-columns: repeat(auto-fit, 400px);
     column-gap: 40px;
     row-gap: 40px;
     margin: 0px auto;
     justify-content: center;
+}
+
+img {
+    width: 400px;
 }
 
 .dropbtn {
@@ -45,10 +51,6 @@ header {
 
 .modal-content {
     padding-bottom: 20px;
-}
-
-img {
-    width: 500px;
 }
 
 
