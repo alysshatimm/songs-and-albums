@@ -2,9 +2,10 @@ import {
     displayHomeView
 } from "./displayHomeView.js";
 
-const deleteAlbum = function (albums) {
+const deleteAlbum = function(album) {
+    const albumDiv = document.getElementById(`album-modal${album.id}`)
     
-    fetch(`localhost:8080/api/albums/${album.id}`, {
+    fetch(`http://localhost:8080/api/albums/${album.id}`, {
         method: 'DELETE'
     })
     .then(response => response.json())
@@ -13,4 +14,4 @@ const deleteAlbum = function (albums) {
     .then(location.reload());
 }
 
-
+export { deleteAlbum }

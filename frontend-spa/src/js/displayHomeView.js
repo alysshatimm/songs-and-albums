@@ -1,5 +1,5 @@
 import { displaySingleAlbum } from "./displaySingleAlbum.js";
-// import { allAlbums } from "./sampleAllAlbumsJson.js";
+import {deleteAlbum} from "./albumDelete.js"
 import { AlbumRatings } from "./albumRatings.js";
 import { SongRatings } from "./songRatings.js";
 
@@ -273,6 +273,7 @@ const displayHomeView = function(albums) {
         albumDeleteButton.classList.add("delete-album");
         albumDeleteButton.type = "submit";
         albumDeleteButton.innerText = ("Delete Album")
+        albumDeleteButton.addEventListener('click', () => deleteAlbum(album))
         songBlock.appendChild(albumDeleteButton);
         let commentBlock = document.createElement("div");
         commentBlock.classList.add("comment-block");
