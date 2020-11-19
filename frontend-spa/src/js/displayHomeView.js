@@ -139,10 +139,11 @@ const displayHomeView = function(albums) {
             songStarFiveLabel.for = `song-star-5${songs.id}`;
             songStarFiveLabel.addEventListener("click", (clickEvent) => {
                 clickEvent.preventDefault()
-                songRatings.fiveStarRating();
+                songRating.fiveStarRating();
                 updateSongRating();
                 clickEvent.target.style.color = "gold"
             });
+
             songRatingForm.appendChild(songStarFiveLabel);
             let songStarFourInput = document.createElement("input");
             songStarFourInput.id = `song-star-4${songs.id}`;
@@ -154,7 +155,7 @@ const displayHomeView = function(albums) {
             songStarFourLabel.for = `song-star-4${songs.id}`;
             songStarFourLabel.addEventListener("click", (clickEvent) => {
                 clickEvent.preventDefault()
-                songRatings.fourStarRating();
+                songRating.fourStarRating();
                 updateSongRating();
                 clickEvent.target.style.color = "gold"
             });
@@ -170,7 +171,7 @@ const displayHomeView = function(albums) {
             songStarThreeLabel.for = `song-star-3${songs.id}`;
             songStarThreeLabel.addEventListener("click", (clickEvent) => {
                 clickEvent.preventDefault()
-                songRatings.threeStarRating();
+                songRating.threeStarRating();
                 updateSongRating();
                 clickEvent.target.style.color = "gold"
             });
@@ -185,7 +186,7 @@ const displayHomeView = function(albums) {
             songStarTwoLabel.for = `song-star-2${songs.id}`;
             songStarTwoLabel.addEventListener("click", (clickEvent) => {
                 clickEvent.preventDefault()
-                songRatings.twoStarRating();
+                songRating.twoStarRating();
                 updateSongRating();
                 clickEvent.target.style.color = "gold"
             });
@@ -200,7 +201,7 @@ const displayHomeView = function(albums) {
             songStarOneLabel.for = `song-star-1${songs.id}`;
             songStarOneLabel.addEventListener("click", (clickEvent) => {
                 clickEvent.preventDefault()
-                songRatings.oneStarRating();
+                songRating.oneStarRating();
                 updateSongRating();
                 clickEvent.target.style.color = "gold"
             });
@@ -265,6 +266,7 @@ const displayHomeView = function(albums) {
             const updateSongRating = function() {
                 songRatingText.innerText = `Average Rating: ${songRating.averageSongRating()}`;
             };
+            updateSongRating();
         });
 
         let albumDeleteButton = document.createElement("button");
