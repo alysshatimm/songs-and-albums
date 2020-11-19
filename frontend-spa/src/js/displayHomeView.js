@@ -30,8 +30,6 @@ const displayHomeView = function(albums) {
         mainElement.appendChild(albumButton);
 
 
-
-
         let outerAlbumDiv = document.createElement("div");
         outerAlbumDiv.classList.add("dropdown-content");
         outerAlbumDiv.id = (`modals${album.id}`);
@@ -212,7 +210,7 @@ const displayHomeView = function(albums) {
             songSubmitCommentButton.type = "submit";
             songSubmitCommentButton.innerText = "Submit";
             songCommentForm.appendChild(songSubmitCommentButton);
-
+            
 
 
 
