@@ -33,9 +33,9 @@ Content-Type: application/json
 
 {"author": "Art", "headline": "URGENT", "comment": "No Comment"}
 
-### View all comments
+### View individual comment associated with song ID
 GET http://localhost:8080//api/song/13/comments
 Accept: application/json
 
-### View individual comment associated with song ID
-GET http://localhost:8080//api/comments/83
+
+

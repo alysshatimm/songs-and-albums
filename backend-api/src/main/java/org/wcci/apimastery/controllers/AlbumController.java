@@ -4,10 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.resources.Album;
 import org.wcci.apimastery.resources.AlbumComment;
 import org.wcci.apimastery.resources.Song;
-import org.wcci.apimastery.storage.AlbumCommentRepository;
-import org.wcci.apimastery.storage.AlbumStorage;
-import org.wcci.apimastery.storage.SongRepository;
-import org.wcci.apimastery.storage.SongStorage;
+import org.wcci.apimastery.storage.*;
 
 @RestController
 public class AlbumController {
@@ -16,12 +13,14 @@ public class AlbumController {
     private SongRepository songRepo;
     private SongStorage songStorage;
     private AlbumCommentRepository albumCommentRepo;
+    private AlbumCommentStorage albumCommentStorage;
 
-    public AlbumController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage, AlbumCommentRepository albumCommentRepo) {
+    public AlbumController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage, AlbumCommentRepository albumCommentRepo, AlbumCommentStorage albumCommentStorage) {
         this.albumStorage = albumStorage;
         this.songRepo = songRepo;
         this.songStorage = songStorage;
         this.albumCommentRepo = albumCommentRepo;
+        this.albumCommentStorage = albumCommentStorage;
     }
 
     @GetMapping("/api/albums")
@@ -77,6 +76,15 @@ public class AlbumController {
         albumCommentRepo.save(comment);
         return comment;
     }
+
+    @GetMapping("/api/albums/{id}/comments")
+    public Iterable<AlbumComment> retrieveAllAlbumComments(@PathVariable Long id) {
+        Album album = albumStorage.retrieveAlbumById(id);
+        return album.getAlbumComments();
+
+    }
+
+
 
 
 }
