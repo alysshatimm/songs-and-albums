@@ -1,7 +1,7 @@
 class SongRatings {
     constructor() {
-        this._songStars = 0;
-        this._songRatingCount = 0;
+        this._songStars = 5;
+        this._songRatingCount = 1;
     }
 
     get albumStars() {
