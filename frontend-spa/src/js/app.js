@@ -40,7 +40,7 @@ fetch("http://localhost:8080/api/albums", {
 
 
   
-const submitAlbum = document.getElementById("add-album-button")
+const submitAlbum = document.getElementById("add-album-submit")
 const artistSubmit = document.getElementById("new-artist-input")
 const albumTitleSubmit = document.getElementById("new-album-input")
 const recordLabelSubmit = document.getElementById("new-record-label-input")
@@ -65,6 +65,7 @@ submitAlbum.addEventListener('click', () => {
         })
         .then(response => response.json())
         .catch(err => console.error(err))
+        .then(albums => displayHomeView(albums))
         .then(closeAlbumAddModal.style.display = "none")
         .then(location.reload());
 
