@@ -1,4 +1,3 @@
-import { allAlbums } from "./sampleAllAlbumsJson.js";
 import { displayHomeView } from "./displayHomeView.js"
 
 const displaySingleAlbum = function(albums) {

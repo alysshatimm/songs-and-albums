@@ -1,5 +1,5 @@
 import { displaySingleAlbum } from "./displaySingleAlbum.js";
-import { allAlbums } from "./sampleAllAlbumsJson.js";
+// import { allAlbums } from "./sampleAllAlbumsJson.js";
 import { AlbumRatings } from "./albumRatings.js";
 import { SongRatings } from "./songRatings.js";
 
