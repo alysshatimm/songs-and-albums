@@ -287,7 +287,7 @@ const displayHomeView = function (albums) {
         songModal.style.display = "block";
       };
 
-      songCloseSpan.onclick = function () {
+      songCloseSpan.onclick = function() {
         songModal.style.display = "none";
       };
 
@@ -436,6 +436,8 @@ const displayHomeView = function (albums) {
     albumSubmitCommentButton.type = "submit";
     albumSubmitCommentButton.innerText = "Submit";
     commentForm.appendChild(albumSubmitCommentButton);
+
+    album.albumComments.forEach((albumComment) => {
     let albumCommentDiv = document.createElement("div");
     albumCommentDiv.classList.add("comments");
     commentForm.appendChild(albumCommentDiv);
@@ -444,17 +446,18 @@ const displayHomeView = function (albums) {
     albumCommentDiv.appendChild(albumCommentOutterP);
     let albumCommentAuthorP = document.createElement("p");
     albumCommentAuthorP.classList.add("author");
-    albumCommentAuthorP.innerText = "Alyssha";
+    albumCommentAuthorP.innerText = `Author: ${albumComment.author}`;
     albumCommentOutterP.appendChild(albumCommentAuthorP);
     let albumCommentHeadlineP = document.createElement("p");
-    albumCommentHeadlineP.classList.add("headline");
-    albumCommentHeadlineP.innerText = "#MakeAmericaOkayAgain";
+    albumCommentHeadlineP.classList.add(`"headline"`);
+    albumCommentHeadlineP.innerText = `Headline: ${albumComment.headline}`;
     albumCommentOutterP.appendChild(albumCommentHeadlineP);
     let albumCommentCommentP = document.createElement("p");
     albumCommentCommentP.classList.add("comment");
-    albumCommentCommentP.innerText =
-      "I will build a great wall--and nobody builds walls better than me, believe me--and I'll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that wall. Mark my words.";
+    albumCommentCommentP.innerText =(`${albumComment.comment}`)
     albumCommentOutterP.appendChild(albumCommentCommentP);
+    })
+
 
     var modal = document.getElementById(`album-modal${album.id}`);
     var button = document.getElementById(`album-button${album.id}`);

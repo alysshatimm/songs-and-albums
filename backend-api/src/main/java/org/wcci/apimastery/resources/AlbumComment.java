@@ -1,5 +1,7 @@
 package org.wcci.apimastery.resources;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,6 +11,7 @@ import java.util.Objects;
 @Entity
 public class AlbumComment {
     @ManyToOne
+    @JsonIgnore
     private Album album;
     private String author;
     private String headline;
