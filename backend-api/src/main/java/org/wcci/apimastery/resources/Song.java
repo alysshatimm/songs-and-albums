@@ -21,7 +21,7 @@ public class Song {
     @JsonIgnore
     private Set<SongRating> songRatings;
     @OneToMany(mappedBy = "song" , cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+//    @JsonIgnore
     private Set<SongComment> songComments;
 
     protected Song() {

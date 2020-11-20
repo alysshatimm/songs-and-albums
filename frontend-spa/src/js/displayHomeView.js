@@ -251,14 +251,14 @@ const displayHomeView = function (albums) {
       songCommentOutterP.classList.add("comment");
       songCommentDiv.appendChild(songCommentOutterP);
 
-      songs.songComment.forEach((songComment) => {
+      songs.songComments.forEach((songComment) => {
         let songCommentAuthorP = document.createElement("p");
         songCommentAuthorP.classList.add("author");
-        songCommentAuthorP.innerText = `${songComment.author}`;
+        songCommentAuthorP.innerText = `Author: ${songComment.author}`;
         songCommentOutterP.appendChild(songCommentAuthorP);
         let songCommentHeadlineP = document.createElement("p");
         songCommentHeadlineP.classList.add("headline");
-        songCommentHeadlineP.innerText = `${songComment.headline}`;
+        songCommentHeadlineP.innerText = `Headline: ${songComment.headline}`;
         songCommentOutterP.appendChild(songCommentHeadlineP);
 
         let songCommentCommentP = document.createElement("p");
