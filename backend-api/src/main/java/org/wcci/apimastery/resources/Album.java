@@ -22,7 +22,7 @@ public class Album {
     @JsonIgnore
     private Set<AlbumRating> albumRatings;
     @OneToMany(mappedBy = "album" , cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+
     private Set<AlbumComment> albumComments;
 
     protected Album(){
