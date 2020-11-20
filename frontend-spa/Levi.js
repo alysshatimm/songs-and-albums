@@ -18,8 +18,30 @@ songCommentCommentP.classList.add("comment");
 songCommentCommentP.innerText = `${songComment.comment}`
 songCommentOutterP.appendChild(songCommentCommentP);
 
-        // UPDATE ALBUM RATINGS
 
-        // UPDATING SONG RATINGS
+const submitAlbum = document.getElementById("add-album-button")
+const artistSubmit = document.getElementById("new-artist-input")
+const albumTitleSubmit = document.getElementById("new-album-input")
+const recordLabelSubmit = document.getElementById("new-record-label-input")
+const albumArtSubmit = document.getElementById("album-image-input")
+submitAlbum.addEventListener('click', (clickEvent) => {
+    const albumJson = {
+        "artist": artistSubmit.value,
+        "albumTitle": albumTitleSubmit.value,
+        "recordLabel": recordLabelSubmit.value,
+        "albumArt": albumArtSubmit.value,
+        "songs": []
+    }
+    fetch("http://localhost:8080/api/albums", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(albumJson)
+        })
+        .then(response => response.json())
+        .then(albums => displayHomeView(albums))
+        .catch(err => console.error(err));
+})
 
       

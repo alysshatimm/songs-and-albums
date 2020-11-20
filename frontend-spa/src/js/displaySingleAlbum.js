@@ -1,5 +1,3 @@
-import { displayHomeView } from "./displayHomeView.js"
-
 const displaySingleAlbum = function(albums) {
     const main = document.querySelector(".container")
 };
