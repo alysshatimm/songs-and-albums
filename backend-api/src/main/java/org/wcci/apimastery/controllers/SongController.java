@@ -4,10 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.resources.Album;
 import org.wcci.apimastery.resources.Song;
 import org.wcci.apimastery.resources.SongComment;
-import org.wcci.apimastery.storage.AlbumStorage;
-import org.wcci.apimastery.storage.SongCommentRepository;
-import org.wcci.apimastery.storage.SongRepository;
-import org.wcci.apimastery.storage.SongStorage;
+import org.wcci.apimastery.storage.*;
 
 @RestController
 public class SongController {
@@ -16,12 +13,14 @@ public class SongController {
     private SongRepository songRepo;
     private SongStorage songStorage;
     private SongCommentRepository songCommentRepo;
+    private SongCommentStorage songCommentStorage;
 
-    public SongController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage, SongCommentRepository songCommentRepo) {
+    public SongController(AlbumStorage albumStorage, SongRepository songRepo, SongStorage songStorage, SongCommentRepository songCommentRepo, SongCommentStorage songCommentStorage) {
         this.albumStorage = albumStorage;
         this.songRepo = songRepo;
         this.songStorage = songStorage;
         this.songCommentRepo = songCommentRepo;
+        this.songCommentStorage = songCommentStorage;
     }
 
     @DeleteMapping("/api/songs/{id}")
@@ -54,6 +53,12 @@ public class SongController {
     public Iterable<SongComment> retrieveAllComments(@PathVariable Long id) {
         Song song = songStorage.retrieveSongById(id);
         return song.getSongComments();
+
+    }
+
+    @GetMapping("/api/comments/{id}")
+    public SongComment retrieveCommentById(@PathVariable Long id){
+        return songCommentStorage.retrieveSongCommentById(id);
     }
 
 
