@@ -274,8 +274,6 @@ const displayHomeView = function (albums) {
           },
         })
           .then((response) => response.json())
-          .then((songs) => displayHomeView(songs))
-          .then((mainElement) => mainElement.appendChild(displayHomeView))
           .catch((error) => console.log(error));
       });
 
