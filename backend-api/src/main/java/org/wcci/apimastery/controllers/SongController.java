@@ -50,6 +50,11 @@ public class SongController {
         return songStorage.retrieveSongById(id);
     }
 
+    @GetMapping("/api/song/{id}/comments")
+    public Iterable<SongComment> retrieveAllComments(@PathVariable Long id) {
+        Song song = songStorage.retrieveSongById(id);
+        return song.getSongComments();
+    }
 
 
 }

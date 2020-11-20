@@ -32,3 +32,6 @@ POST http://localhost:8080//api/songs/13/comments
 Content-Type: application/json
 
 {"author": "Art", "headline": "URGENT", "comment": "No Comment"}
+
+### Get Song Comments
+GET http://localhost:8080//api/song/13/comments

@@ -33,3 +33,4 @@ Content-Type: application/json
 
 {"author": "Art", "headline": "FOREIGNERS!", "comment": "Ummmm, No Comment."}
 
+### Get Album Comments
